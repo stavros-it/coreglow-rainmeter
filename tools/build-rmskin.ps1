@@ -18,7 +18,7 @@ Copy-Item $src "$stage\Skins\Coreglow" -Recurse
 @"
 [rmskin]
 Name=Coreglow
-Author=Stavros
+Author=Stavros Antoniou
 Version=$Version
 MinimumRainmeter=4.5.0
 MinimumWindows=10.0
