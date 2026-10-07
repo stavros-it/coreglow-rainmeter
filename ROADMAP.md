@@ -1,4 +1,4 @@
-# CoreStats – Roadmap
+# Coreglow – Roadmap
 
 ## ✅ Done (v1.0 – 2026-10-07)
 
@@ -18,9 +18,10 @@
 - [x] Colored per-thread bars (accent < 50% ≤ amber < 80% ≤ red), with a per-thread % tooltip
 - [x] Ring tooltips for CPU and temp: min/max since load, average over the last hour (`AverageSize=3600`)
 - [x] Rainmeter logging/debug turned off
-- [x] `.rmskin` installer: `tools\build-rmskin.ps1` → `dist\CoreStats_1.1.rmskin`
+- [x] `.rmskin` installer: `tools\build-rmskin.ps1` → `dist\Coreglow_1.1.rmskin`
 - [x] Local git repo + `tools\sync.ps1`
 - [x] Classic variant removed; only Pro remains
+- [x] Renamed CoreStats → **Coreglow** (`Skins\Coreglow\Coreglow.ini`)
 - [x] "VRAM" label on the GPU memory value
 
 ## 📋 Backlog (v1.2 – features, not started)

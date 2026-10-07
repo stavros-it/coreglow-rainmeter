@@ -1,4 +1,4 @@
-# CoreStats – Project Context
+# Coreglow – Project Context
 
 Rainmeter desktop system monitor for Windows 11, modern style (Shape meters, rounded corners, gradients).
 Owner: Stavros. Started 2026-10-07.
@@ -7,8 +7,8 @@ Owner: Stavros. Started 2026-10-07.
 
 | What | Path |
 |---|---|
-| Live skin (what Rainmeter runs) | `%USERPROFILE%\Documents\Rainmeter\Skins\CoreStats\` |
-| Backup + install guide | `Desktop\New folder\CoreStats-backup\` (`INSTALL.md`) |
+| Live skin (what Rainmeter runs) | `%USERPROFILE%\Documents\Rainmeter\Skins\Coreglow\` |
+| Backup + install guide | `Desktop\New folder\Coreglow-backup\` (`INSTALL.md`) |
 | Rainmeter settings / log | `%APPDATA%\Rainmeter\Rainmeter.ini`, `Rainmeter.log` (logging OFF; turn it on to debug) |
 | Core Temp plugin | `C:\Program Files\Rainmeter\Plugins\CoreTemp.dll` |
 | Tools | `tools\sync.ps1` (live → backup, resets generated files), `tools\build-rmskin.ps1` (→ `dist\`) |
@@ -22,20 +22,20 @@ Debug trick: temporarily add `OnUpdateAction=[!Log "[Measure:]"]` + `DynamicVari
 ## Structure
 
 ```
-CoreStats\
-├── Pro\CoreStatsPro.ini   Pro variant       (config "CoreStats\Pro")
+Coreglow\
+├── Coreglow.ini           the skin (config "Coreglow")
 └── @Resources\            shared by both (#@#)
     ├── Variables.inc      colors, font, thresholds, WeatherLoc
-    ├── Theme0.inc / Theme1.inc / ThemeState.inc   dark/light theme (Pro)
+    ├── Theme0.inc / Theme1.inc / ThemeState.inc   dark/light theme + collapsed state
     ├── Cores.lua          generates Cores.inc (per-thread bars) from NUMBER_OF_PROCESSORS
     └── Cores.inc          generated
 ```
 
-A Rainmeter config folder runs one .ini at a time, so the Pro variant lives in a subfolder to be its own config.
+Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-10-07; Classic was dropped and Pro became the only skin.
 
 ## Features
 
-- **Pro (only variant; Classic removed):** weather (wttr.in), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
+- **Features:** weather (wttr.in), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
   RAM/SWAP bars, external IP, ↓/↑ speed + graph, uptime.
   plus GPU % ring + VRAM, per-thread bars (auto for any CPU), CPU name, clock/date, top process,
   C: usage + R/W, LAN IP + adapter, ping, total traffic, click actions, hover glow, ☰ collapse, auto light/dark theme.

@@ -1,8 +1,8 @@
-# Copies the live skin from Rainmeter's Skins folder into CoreStats-backup\
+# Copies the live skin from Rainmeter's Skins folder into Coreglow-backup\
 # and resets machine-specific generated files.
 $root = Split-Path $PSScriptRoot -Parent
-$live = "$env:USERPROFILE\Documents\Rainmeter\Skins\CoreStats"
-$dst  = "$root\CoreStats-backup\CoreStats"
+$live = "$env:USERPROFILE\Documents\Rainmeter\Skins\Coreglow"
+$dst  = "$root\Coreglow-backup\Coreglow"
 
 if (Test-Path $dst) { Remove-Item $dst -Recurse -Force }
 Copy-Item $live $dst -Recurse
