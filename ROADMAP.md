@@ -24,6 +24,10 @@
 - [x] Renamed CoreStats → **Coreglow** (`Skins\Coreglow\Coreglow.ini`)
 - [x] "VRAM" label on the GPU memory value
 
+## ✅ Done (v1.2 – 2026-10-08)
+
+- [x] Alerts: temp ring blinks above `TempHot`; CPU ring + label turn red ("⚠ CPU") when CPU ≥ `LoadAlert`% for `LoadAlertSecs` s
+
 ## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)
@@ -31,17 +35,17 @@
 - [ ] Settings panel skin: accent color picker, scale, choice of sections, weather location
 - [ ] Scale variable (100% / 125% / 150%) for high-DPI screens
 - [ ] Media "now playing" row (NowPlaying / WebNowPlaying plugin)
-- [ ] Alerts: flash the temperature ring above TempHot, or a toast when CPU > 90% for 30 s
+- [ ] Top-3 process lists (CPU and RAM) via UsageMonitor, replacing the single top-process row
 
 ## 💡 Ideas / maybe
 
 - [ ] Compact horizontal "taskbar strip" variant
-- [ ] Per-process top-3 list (CPU and RAM)
 - [ ] Latency history graph for ping
 - [ ] Publish on DeviantArt / Rainmeter forums
 
 ## Known limitations
 
+- CPU fan RPM requires HWiNFO or LibreHardwareMonitor (Core Temp and Windows don't expose it).
 - GPU temperature requires HWiNFO (Windows exposes no counter for it).
 - SWAP shows commit charge, not pagefile usage.
 - wttr.in can rate-limit. The weather then shows "Weather unavailable" until the next refresh.

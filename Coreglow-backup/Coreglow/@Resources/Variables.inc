@@ -31,6 +31,12 @@ TempHot=80
 TempOk=60,220,140,255
 TempWarnColor=255,180,50,255
 TempHotColor=255,70,80,255
+TempHotDim=255,70,80,90
+
+; ===== Alerts =====
+; CPU ring + label turn red when CPU % >= LoadAlert for LoadAlertSecs seconds
+LoadAlert=90
+LoadAlertSecs=30
 
 ; ===== Weather (wttr.in location: city, airport code or lat,lon) =====
 WeatherLoc=LGIR

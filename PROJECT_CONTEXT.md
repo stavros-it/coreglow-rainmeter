@@ -38,7 +38,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 - **Features:** weather (wttr.in), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
   RAM/SWAP bars, external IP, ↓/↑ speed + graph, uptime.
   plus GPU % ring + VRAM, per-thread bars (auto for any CPU), CPU name, clock/date, top process,
-  C: usage + R/W, LAN IP + adapter, ping, total traffic, click actions, hover glow, ☰ collapse, auto light/dark theme.
+  C: usage + R/W, LAN IP + adapter, ping, total traffic, click actions, hover glow, alerts (blinking hot temp ring, sustained high-load CPU warning), ☰ collapse, auto light/dark theme.
 
 ## Data sources
 
@@ -68,7 +68,8 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
   Check for `^;.*\[` after scripted edits.
 - `Cores.lua` regenerates `Cores.inc` when the thread count or `VERSION` changes. Bump `VERSION` after editing the generator.
 - `.rmskin` = zip (RMSKIN.ini + `Skins/...`) + 16-byte footer (int64 zip size, flags byte, `RMSKIN\0`).
-- Not possible without extra software: GPU temperature (needs HWiNFO).
+- Not possible without extra software: GPU temperature, CPU fan RPM (need HWiNFO / LibreHardwareMonitor; Win32_Fan is empty on this board).
+- Alerts: `MeasureTempAlert` toggles 1/0 each update while hot (blink); `MeasureLoadHigh` counts consecutive seconds ≥ `LoadAlert`. Hot color is owned by the alert measure, not `MeasureTemp`'s IfConditions.
 
 ## User's system (reference)
 
