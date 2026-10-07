@@ -21,8 +21,9 @@
 - [x] `.rmskin` installer: `tools\build-rmskin.ps1` → `dist\CoreStats_1.1.rmskin`
 - [x] Local git repo + `tools\sync.ps1`
 - [x] Classic variant removed; only Pro remains
+- [x] "VRAM" label on the GPU memory value
 
-## 🧭 Later (v1.2 – features)
+## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)
 - [ ] Weather forecast tooltip or popup for the next 3 days (wttr.in `format=j1` + Lua parsing)
