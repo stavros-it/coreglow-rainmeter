@@ -17,35 +17,9 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ## Preview
 
-```
-╭───────────────────────────────────────────╮
-│  ● DESKTOP-PC            14:32 · Tue 7 Oct  │
-│  AMD Ryzen 7 5700X         UP 2d 04h 17m ☰│
-│  🌤️ T: 17°C | Partly Cloudy | H: 65% | W: 5 km/h │
-│                                           │
-│     ╭───╮        ╭───╮        ╭───╮       │
-│    │ 38%│       │54° │       │22% │       │
-│     ╰───╯        ╰───╯        ╰───╯       │
-│      CPU        MAX TEMP       GPU        │
-│  ▂▅▃▇▂▁▄▃▆▂▃▁▅▂▃▄   per-thread load        │
-│  ⚡ 42.7 W    ◷ 4 650 MHz    VRAM 2.1 GB   │
-│  Top: chrome  3.4%                        │
-│  ───────────────────────────────────────  │
-│  MEMORY                                   │
-│  RAM   █████████████░░░░░░░░    61 %      │
-│  SWAP  ███░░░░░░░░░░░░░░░░░░    12 %      │
-│  ───────────────────────────────────────  │
-│  STORAGE                                  │
-│  C:    ██████████░░░░░░░░░░░    75 %      │
-│        312 GB / 418 GB   R 45 MB/s  W 3 MB/s │
-│  ───────────────────────────────────────  │
-│  NETWORK         Realtek PCIe GbE…        │
-│  Ext 203.0.113.7      LAN 192.168.1.24    │
-│  ↓ 1.2 MB/s      ↑ 86 kB/s       ◉ 12 ms  │
-│  ▁▂▅▇▅▃▂▁▂▄▆▅▃▂▁▁▂▃▅▃                     │
-│  Total:  ↓ 3.4 GB   ↑ 410 MB              │
-╰───────────────────────────────────────────╯
-```
+<p align="center">
+  <img src="docs/screenshot.png" alt="Coreglow skin on the Windows 11 desktop" width="309">
+</p>
 
 ## Features
 
