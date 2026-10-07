@@ -20,6 +20,7 @@
 - [x] Rainmeter logging/debug turned off
 - [x] `.rmskin` installer: `tools\build-rmskin.ps1` → `dist\CoreStats_1.1.rmskin`
 - [x] Local git repo + `tools\sync.ps1`
+- [x] Classic variant removed; only Pro remains
 
 ## 🧭 Later (v1.2 – features)
 
@@ -35,7 +36,6 @@
 - [ ] Compact horizontal "taskbar strip" variant
 - [ ] Per-process top-3 list (CPU and RAM)
 - [ ] Latency history graph for ping
-- [ ] Classic variant: switch to `Interface=Best` to match Pro
 - [ ] Publish on DeviantArt / Rainmeter forums
 
 ## Known limitations

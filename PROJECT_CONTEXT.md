@@ -23,7 +23,6 @@ Debug trick: temporarily add `OnUpdateAction=[!Log "[Measure:]"]` + `DynamicVari
 
 ```
 CoreStats\
-├── CoreStats.ini          Classic variant   (config "CoreStats")
 ├── Pro\CoreStatsPro.ini   Pro variant       (config "CoreStats\Pro")
 └── @Resources\            shared by both (#@#)
     ├── Variables.inc      colors, font, thresholds, WeatherLoc
@@ -36,9 +35,9 @@ A Rainmeter config folder runs one .ini at a time, so the Pro variant lives in a
 
 ## Features
 
-- **Both variants:** weather (wttr.in), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
+- **Pro (only variant; Classic removed):** weather (wttr.in), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
   RAM/SWAP bars, external IP, ↓/↑ speed + graph, uptime.
-- **Pro only:** GPU % ring + VRAM, per-thread bars (auto for any CPU), CPU name, clock/date, top process,
+  plus GPU % ring + VRAM, per-thread bars (auto for any CPU), CPU name, clock/date, top process,
   C: usage + R/W, LAN IP + adapter, ping, total traffic, click actions, hover glow, ☰ collapse, auto light/dark theme.
 
 ## Data sources
@@ -62,7 +61,7 @@ A Rainmeter config folder runs one .ini at a time, so the Pro variant lives in a
   The CPU alias value is already % of the total CPU, so don't divide by threads.
 - **`Meter=` cannot be set in a MeterStyle.** Put it in the meter section itself.
 - New config folders need `!RefreshApp` before `!ActivateConfig` works.
-- `Interface=Best` avoids counting VMware/Hyper-V/Tailscale virtual adapters (Pro). Classic sums all adapters.
+- `Interface=Best` avoids counting VMware/Hyper-V/Tailscale virtual adapters.
 - `SwapMemory` = commit charge (RAM + pagefile), not pagefile alone.
 - A self-referencing Calc running average stayed at 0. Use `AverageSize=N` on the measure instead.
 - Here-strings inserted with `.Replace()` have no trailing newline, which glues the next `[Section]` onto a comment line.

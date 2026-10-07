@@ -26,7 +26,7 @@ Your `Variables.inc` settings are kept when you upgrade.
 
 **Manually:**
 
-1. Copy the `CoreStats` folder (the one containing `CoreStats.ini`, `Pro` and `@Resources`) to:
+1. Copy the `CoreStats` folder (the one containing `Pro` and `@Resources`) to:
    `%USERPROFILE%\Documents\Rainmeter\Skins\`
 2. Right-click the Rainmeter tray icon → **Refresh all**.
 3. Right-click the tray icon → **Manage** → select the skin (see the variants below) → **Load**.
@@ -35,14 +35,13 @@ Your `Variables.inc` settings are kept when you upgrade.
 
 ## 3. Variants
 
-The `CoreStats` folder contains two skins. Load either one, or both:
+The `CoreStats` folder contains one skin, CoreStats Pro:
 
 | Skin (Manage → …) | Contents |
 |---|---|
-| `CoreStats\CoreStats.ini` | Classic: weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime |
-| `CoreStats\Pro\CoreStatsPro.ini` | Everything above **plus**: GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, click actions, hover glow, collapse button (☰), automatic light/dark theme |
+| `CoreStats\Pro\CoreStatsPro.ini` | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, click actions, hover glow, collapse button (☰), automatic light/dark theme |
 
-### Weather (both skins)
+### Weather
 - Shown under the header as `T: 17°C | Partly Cloudy | H: 65% | W: 5 km/h`, from https://wttr.in.
 - Refreshes every 15 minutes. Click it to open the full forecast in your browser.
 - Location: `WeatherLoc=LGIR` in `@Resources\Variables.inc`. Use a city (`Athens`), an airport code (`LGIR`)
@@ -50,7 +49,7 @@ The `CoreStats` folder contains two skins. Load either one, or both:
 - Shows "Weather unavailable" if wttr.in can't be reached.
 - Starts with a weather icon (🌤️). Hover over the line to see the feels-like temperature.
 
-### Tooltips (both skins)
+### Tooltips
 - Hover over the **CPU** or **Max Temp** ring to see the min and max since the skin loaded, and the average over the last hour.
 
 ### Pro notes
@@ -62,7 +61,7 @@ The `CoreStats` folder contains two skins. Load either one, or both:
   If the count changes (new PC or CPU), it rewrites the file and refreshes the skin once. You don't need to edit anything.
 - Only the **C:** drive is shown.
 - Network speed uses only the main internet adapter (`Interface=Best`), so VMware, Hyper-V and Tailscale
-  traffic isn't counted twice. The Classic skin adds up all adapters.
+  traffic isn't counted twice.
 - Click actions: the CPU ring and top process open Task Manager, C: opens Explorer, NETWORK opens Network settings,
   and the weather line opens the forecast.
 - Thread bars turn amber at 50% load and red at 80%. Hover over a bar to see its exact %.
@@ -80,14 +79,13 @@ thresholds (`TempWarn`, `TempHot`). Right-click → **Refresh skin** after savin
 - Font sizes: the `FontSize=` lines in the `Style...` sections of each `.ini`.
 - Ping target: `PingHost=` in the Pro `[Variables]` section.
 
-**Important:** `CoreStats.ini` and `CoreStatsPro.ini` are saved as **UTF-16 LE** so the symbols (⚡ ° ↓ ↑ ☰) display correctly.
+**Important:** `CoreStatsPro.ini` is saved as **UTF-16 LE** so the symbols (⚡ ° ↓ ↑ ☰) display correctly.
 Keep that encoding when you edit them (Notepad: *Save As* → Encoding *UTF-16 LE*).
 
 ## 5. Files
 
 ```
 CoreStats\
-├── CoreStats.ini          Classic skin
 ├── Pro\CoreStatsPro.ini   Pro skin
 └── @Resources\
     ├── Variables.inc      colors, font, thresholds, weather location (shared)
