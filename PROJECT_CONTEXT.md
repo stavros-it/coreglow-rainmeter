@@ -8,11 +8,11 @@ Owner: Stavros. Started 2026-10-07.
 | What | Path |
 |---|---|
 | Live skin (what Rainmeter runs) | `%USERPROFILE%\Documents\Rainmeter\Skins\Coreglow\` |
-| Backup + install guide | `Desktop\New folder\Coreglow-backup\` (`INSTALL.md`) |
+| Backup + install guide | `Coreglow-backup\` (in repo) (`INSTALL.md`) |
 | Rainmeter settings / log | `%APPDATA%\Rainmeter\Rainmeter.ini`, `Rainmeter.log` (logging OFF; turn it on to debug) |
 | Core Temp plugin | `C:\Program Files\Rainmeter\Plugins\CoreTemp.dll` |
 | Tools | `tools\sync.ps1` (live → backup, resets generated files), `tools\build-rmskin.ps1` (→ `dist\`) |
-| Git | local repo in `Desktop\New folder` (`dist\` ignored) |
+| Git | local repo in `%USERPROFILE%\OneDrive\My AI Apps\Coreglow Rainmeter` (`dist\` ignored) |
 
 **Workflow:** edit the live skin → `Rainmeter.exe !Refresh "<config>"` → check the log
 (`!WriteKeyValue Rainmeter Logging 1 "%APPDATA%\Rainmeter\Rainmeter.ini"`) → `tools\sync.ps1` →
