@@ -1,0 +1,2 @@
+[Variables]
+CoreCount=0
