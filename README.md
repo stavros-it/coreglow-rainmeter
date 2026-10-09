@@ -31,7 +31,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 | 🧠 **Memory** | RAM and swap/commit bars with used / total |
 | 💾 **Storage** | C: drive usage plus live read/write speed |
 | 🌐 **Network** | External and LAN IP, adapter, ↓/↑ speed, ping, live traffic graph, total traffic |
-| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Location and units auto-detected by IP. Hover for feels-like and location |
+| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Location (shown above the weather) and units auto-detected by IP. Hover for feels-like |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
 | 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows |

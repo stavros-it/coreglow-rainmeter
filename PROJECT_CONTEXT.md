@@ -69,6 +69,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 - `Cores.lua` regenerates `Cores.inc` when the thread count or `VERSION` changes. Bump `VERSION` after editing the generator.
 - `.rmskin` = zip (RMSKIN.ini + `Skins/...`) + 16-byte footer (int64 zip size, flags byte, `RMSKIN\0`).
 - Not possible without extra software: GPU temperature, CPU fan RPM (need HWiNFO / LibreHardwareMonitor; Win32_Fan is empty on this board).
+- Layout uses absolute `Y=` values. To insert a row, add 18 px to every `Y` at or below it (including `StyleCore`) and to `FullH`/`MiniH`/`BgH`.
 - Alerts: `MeasureTempAlert` toggles 1/0 each update while hot (blink); `MeasureLoadHigh` counts consecutive seconds ≥ `LoadAlert`. Hot color is owned by the alert measure, not `MeasureTemp`'s IfConditions.
 
 ## User's system (reference)

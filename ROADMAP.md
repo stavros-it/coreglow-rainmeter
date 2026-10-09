@@ -31,6 +31,7 @@
 ## ✅ Done (v1.3 – 2026-10-09)
 
 - [x] Weather auto-detects the location from the public IP (empty `WeatherLoc`) and uses regional units (`WeatherUnits`: auto / m / u / M); location shown in the tooltip
+- [x] Location name on its own line above the weather (layout shifted down 18 px, `FullH` 664 / `MiniH` 304)
 
 ## 📋 Backlog (v1.2 – features, not started)
 
