@@ -25,7 +25,7 @@ Debug trick: temporarily add `OnUpdateAction=[!Log "[Measure:]"]` + `DynamicVari
 Coreglow\
 ├── Coreglow.ini           the skin (config "Coreglow")
 └── @Resources\            shared by both (#@#)
-    ├── Variables.inc      colors, font, thresholds, WeatherLoc
+    ├── Variables.inc      colors, font, thresholds, WeatherLoc, WeatherUnits
     ├── Theme0.inc / Theme1.inc / ThemeState.inc   dark/light theme + collapsed state
     ├── Cores.lua          generates Cores.inc (per-thread bars) from NUMBER_OF_PROCESSORS
     └── Cores.inc          generated
@@ -47,7 +47,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 | Temp / power / clock / CPU name | `Plugin=CoreTemp`, `CoreTempType=MaxTemperature / Power / CpuSpeed / CpuName` |
 | GPU %, VRAM, disk R/W, top process | `Plugin=UsageMonitor` (Alias GPU / VRAM / CPU, Category LogicalDisk) |
 | External IP | WebParser `https://api.ipify.org` (600 s) |
-| Weather | WebParser `https://wttr.in/#WeatherLoc#?format=%t|%C|%h|%w&m` (900 s) + RegExp Substitute |
+| Weather | WebParser `https://wttr.in/#WeatherLoc#?format=%c|%t|%C|%h|%w|%f|%l&#WeatherUnits#` (900 s). Empty WeatherLoc = IP geolocation, empty WeatherUnits = regional units; wind unit is parsed, not hardcoded |
 | Ping | `Plugin=PingPlugin`, 1.1.1.1 |
 | Theme | Registry `HKCU\...\Themes\Personalize\AppsUseLightTheme` |
 
@@ -74,4 +74,4 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 ## User's system (reference)
 
 AMD Ryzen 7 5700X (8C/16T), AMD Radeon RX 7600, MSI MS-7C56 desktop, Realtek GbE (wired, no Wi-Fi, no battery).
-Weather location LGIR (Heraklion). Only C: drive wanted in Storage.
+Weather location auto-detected (resolves to Sisi, Crete; was pinned to LGIR before 2026-10-09). Only C: drive wanted in Storage.

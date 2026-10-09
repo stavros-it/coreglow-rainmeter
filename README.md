@@ -31,7 +31,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 | 🧠 **Memory** | RAM and swap/commit bars with used / total |
 | 💾 **Storage** | C: drive usage plus live read/write speed |
 | 🌐 **Network** | External and LAN IP, adapter, ↓/↑ speed, ping, live traffic graph, total traffic |
-| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Hover for feels-like |
+| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Location and units auto-detected by IP. Hover for feels-like and location |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
 | 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows |
@@ -68,7 +68,8 @@ Accent1=0,200,255,255      ; gradient start (cyan)
 Accent2=150,90,255,255     ; gradient end (violet)
 TempWarn=60                ; °C → amber
 TempHot=80                 ; °C → red
-WeatherLoc=London          ; city, airport code or lat,lon
+WeatherLoc=                ; empty = auto-detect from your IP, or a city, airport code or lat,lon
+WeatherUnits=              ; empty = automatic for the region, or m / u (imperial) / M (wind m/s)
 ```
 
 Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`.

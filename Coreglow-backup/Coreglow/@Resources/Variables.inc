@@ -38,5 +38,8 @@ TempHotDim=255,70,80,90
 LoadAlert=90
 LoadAlertSecs=30
 
-; ===== Weather (wttr.in location: city, airport code or lat,lon) =====
-WeatherLoc=LGIR
+; ===== Weather (wttr.in) =====
+; Location: city, airport code or lat,lon. Leave empty to auto-detect from your public IP.
+WeatherLoc=
+; Units: empty = automatic for the region (US -> imperial, elsewhere metric), m = metric, u = imperial (°F, mph), M = metric with wind in m/s
+WeatherUnits=

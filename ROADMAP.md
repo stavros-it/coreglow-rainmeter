@@ -28,6 +28,10 @@
 
 - [x] Alerts: temp ring blinks above `TempHot`; CPU ring + label turn red ("⚠ CPU") when CPU ≥ `LoadAlert`% for `LoadAlertSecs` s
 
+## ✅ Done (v1.3 – 2026-10-09)
+
+- [x] Weather auto-detects the location from the public IP (empty `WeatherLoc`) and uses regional units (`WeatherUnits`: auto / m / u / M); location shown in the tooltip
+
 ## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)

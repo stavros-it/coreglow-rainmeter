@@ -42,10 +42,13 @@ Your `Variables.inc` settings are kept when you upgrade.
 ### Weather
 - Shown under the header as `T: 17°C | Partly Cloudy | H: 65% | W: 5 km/h`, from https://wttr.in.
 - Refreshes every 15 minutes. Click it to open the full forecast in your browser.
-- Location: `WeatherLoc=LGIR` in `@Resources\Variables.inc`. Use a city (`Athens`), an airport code (`LGIR`)
-  or `lat,lon`.
+- Location: `WeatherLoc=` in `@Resources\Variables.inc`. Empty (the default) auto-detects your location from
+  your public IP, so the skin follows you when you travel. Or pin a city (`Athens`), an airport code (`LGIR`) or `lat,lon`.
+- Units: `WeatherUnits=` empty (the default) uses the units of the detected region (imperial in the US, metric
+  elsewhere). Force them with `m` (metric), `u` (°F, mph) or `M` (metric, wind in m/s).
+- The tooltip shows the location wttr.in resolved (e.g. `Sisi, Crete, GR`).
 - Shows "Weather unavailable" if wttr.in can't be reached.
-- Starts with a weather icon (🌤️). Hover over the line to see the feels-like temperature.
+- Starts with a weather icon (🌤️). Hover over the line to see the feels-like temperature and location.
 
 ### Tooltips
 - Hover over the **CPU** or **Max Temp** ring to see the min and max since the skin loaded, and the average over the last hour.
