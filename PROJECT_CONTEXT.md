@@ -11,7 +11,7 @@ Owner: Stavros. Started 2026-10-07.
 | Backup + install guide | `Coreglow-backup\` (in repo) (`INSTALL.md`) |
 | Rainmeter settings / log | `%APPDATA%\Rainmeter\Rainmeter.ini`, `Rainmeter.log` (logging OFF; turn it on to debug) |
 | Core Temp plugin | `C:\Program Files\Rainmeter\Plugins\CoreTemp.dll` |
-| Tools | `tools\sync.ps1` (live → backup, resets generated files), `tools\build-rmskin.ps1` (→ `dist\`) |
+| Tools | `tools\sync.ps1` (live → backup, resets generated files and `WeatherLoc`), `tools\build-rmskin.ps1` (→ `dist\`) |
 | Git | local repo in `%USERPROFILE%\OneDrive\My AI Apps\Coreglow Rainmeter` (`dist\` ignored) |
 
 **Workflow:** edit the live skin → `Rainmeter.exe !Refresh "<config>"` → check the log
@@ -75,4 +75,4 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 ## User's system (reference)
 
 AMD Ryzen 7 5700X (8C/16T), AMD Radeon RX 7600, MSI MS-7C56 desktop, Realtek GbE (wired, no Wi-Fi, no battery).
-Weather location auto-detected (resolves to Sisi, Crete; was pinned to LGIR before 2026-10-09). Only C: drive wanted in Storage.
+Weather location pinned to LGIR (Heraklion) in the live skin only (since 2026-10-09). `sync.ps1` clears `WeatherLoc` in the backup so the repo ships auto-detect. Only C: drive wanted in Storage.
