@@ -18,7 +18,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 ## Preview
 
 <p align="center">
-  <img src="docs/screenshot.png" alt="Coreglow skin on the Windows 11 desktop" width="309">
+  <img src="docs/screenshot.png" alt="Coreglow skin on the Windows 11 desktop" width="320">
 </p>
 
 ## Features
