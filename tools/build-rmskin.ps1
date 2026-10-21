@@ -1,7 +1,7 @@
 # Builds dist\Coreglow_<version>.rmskin from Coreglow-backup\Coreglow.
 # An .rmskin is a zip (RMSKIN.ini + Skins\...) followed by a 16-byte footer:
 # int64 zip size, 1 byte flags, "RMSKIN\0".
-param([string]$Version = '1.1')
+param([string]$Version = '1.4')
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $root  = Split-Path $PSScriptRoot -Parent
@@ -20,7 +20,7 @@ Copy-Item $src "$stage\Skins\Coreglow" -Recurse
 Name=Coreglow
 Author=Stavros Antoniou
 Version=$Version
-MinimumRainmeter=4.5.0
+MinimumRainmeter=4.5.6
 MinimumWindows=10.0
 LoadType=Skin
 Load=Coreglow\Coreglow.ini

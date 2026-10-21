@@ -6,9 +6,9 @@
 
 CPU · GPU · temperature · power · RAM · network · weather, all in one clean, theme-aware panel.
 
-![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5%2B-1e90ff)
+![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-1.1-8a5cff)
+![Version](https://img.shields.io/badge/version-1.4-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -31,6 +31,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 | 🧠 **Memory** | RAM and swap/commit bars with used / total |
 | 💾 **Storage** | C: drive usage plus live read/write speed |
 | 🌐 **Network** | External and LAN IP, adapter, ↓/↑ speed, ping, live traffic graph, total traffic |
+| 📶 **Wi-Fi** | Shown only while Wi-Fi is connected: signal bars, SSID and signal in dBm. Hover for %, band, security and link speed |
 | 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Location (shown above the weather) and units auto-detected by IP. Hover for feels-like |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
@@ -41,7 +42,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 | Software | Purpose |
 |---|---|
-| [Rainmeter](https://www.rainmeter.net) 4.5+ | Runs the skin |
+| [Rainmeter](https://www.rainmeter.net) 4.5.6+ | Runs the skin |
 | [Core Temp](https://www.alcpu.com/CoreTemp/) | CPU temperature, power, clock and name. Must be running |
 | [Core Temp Rainmeter plugin](https://www.alcpu.com/CoreTemp/) (`CoreTemp.dll`) | Lets Rainmeter read Core Temp. Find it on the Core Temp site under *Add-ons* |
 
