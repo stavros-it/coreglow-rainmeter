@@ -6,9 +6,9 @@
 
 CPU · GPU · temperature · power · RAM · network · weather, all in one clean, theme-aware panel.
 
-![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5%2B-1e90ff)
+![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-1.1-8a5cff)
+![Version](https://img.shields.io/badge/version-1.4-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -42,7 +42,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 | Software | Purpose |
 |---|---|
-| [Rainmeter](https://www.rainmeter.net) 4.5+ | Runs the skin |
+| [Rainmeter](https://www.rainmeter.net) 4.5.6+ | Runs the skin |
 | [Core Temp](https://www.alcpu.com/CoreTemp/) | CPU temperature, power, clock and name. Must be running |
 | [Core Temp Rainmeter plugin](https://www.alcpu.com/CoreTemp/) (`CoreTemp.dll`) | Lets Rainmeter read Core Temp. Find it on the Core Temp site under *Add-ons* |
 

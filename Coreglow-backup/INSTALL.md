@@ -7,7 +7,7 @@ CPU power (W), CPU clock (MHz), external IP, download/upload speed, Windows upti
 
 | Software | Why | Where |
 |---|---|---|
-| **Rainmeter** 4.5 or newer | Runs the skin | https://www.rainmeter.net |
+| **Rainmeter** 4.5.6 or newer | Runs the skin | https://www.rainmeter.net |
 | **Core Temp** | Provides CPU temperature, power, clock and CPU name | https://www.alcpu.com/CoreTemp/ |
 | **Core Temp Rainmeter plugin** (`CoreTemp.dll`) | Lets Rainmeter read Core Temp's data | Core Temp website → *Add-ons* → *Rainmeter plugin* |
 
