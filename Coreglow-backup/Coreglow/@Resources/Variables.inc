@@ -43,3 +43,7 @@ LoadAlertSecs=30
 WeatherLoc=
 ; Units: empty = automatic for the region (US -> imperial, elsewhere metric), m = metric, u = imperial (°F, mph), M = metric with wind in m/s
 WeatherUnits=
+
+; ===== Wi-Fi =====
+; Wireless adapter index for the Wi-Fi row (shown only while Wi-Fi is connected). Try 1, 2... if 0 shows nothing.
+WiFiIntf=0

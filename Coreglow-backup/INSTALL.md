@@ -61,6 +61,11 @@ Your `Variables.inc` settings are kept when you upgrade.
   logical processor count from Windows and writes `@Resources\Cores.inc` with one bar per thread, sized to fill the row.
   If the count changes (new PC or CPU), it rewrites the file and refreshes the skin once. You don't need to edit anything.
 - Only the **C:** drive is shown.
+- **Wi-Fi row** (Network section) appears only while Wi-Fi is connected: signal bars, SSID and signal in dBm.
+  The dBm value is estimated from the Windows signal quality (0% = -100 dBm, 100% = -50 dBm or better).
+  On Windows 11 24H2+ turn on *Settings → Privacy & security → Location → Let desktop apps access your location*,
+  otherwise Windows hides Wi-Fi details from Rainmeter and the row stays hidden. With several wireless adapters,
+  change `WiFiIntf=` in `@Resources\Variables.inc`.
 - Network speed uses only the main internet adapter (`Interface=Best`), so VMware, Hyper-V and Tailscale
   traffic isn't counted twice.
 - Click actions: the CPU ring and top process open Task Manager, C: opens Explorer, NETWORK opens Network settings,

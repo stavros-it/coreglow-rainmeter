@@ -33,6 +33,10 @@
 - [x] Weather auto-detects the location from the public IP (empty `WeatherLoc`) and uses regional units (`WeatherUnits`: auto / m / u / M); location shown in the tooltip
 - [x] Location name on its own line above the weather (layout shifted down 18 px, `FullH` 664 / `MiniH` 304)
 
+## ✅ Done (v1.4 – 2026-10-21)
+
+- [x] Wi-Fi row in Network (only while connected): signal bars, SSID, ≈dBm; tooltip with %, PHY, auth, link speed; click → Wi-Fi settings
+
 ## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)

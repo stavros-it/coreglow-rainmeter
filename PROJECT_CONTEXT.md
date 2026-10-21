@@ -38,7 +38,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 - **Features:** weather (wttr.in), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
   RAM/SWAP bars, external IP, ↓/↑ speed + graph, uptime.
   plus GPU % ring + VRAM, per-thread bars (auto for any CPU), CPU name, clock/date, top process,
-  C: usage + R/W, LAN IP + adapter, ping, total traffic, click actions, hover glow, alerts (blinking hot temp ring, sustained high-load CPU warning), ☰ collapse, auto light/dark theme.
+  C: usage + R/W, LAN IP + adapter, Wi-Fi row (bars, SSID, dBm; only while connected), ping, total traffic, click actions, hover glow, alerts (blinking hot temp ring, sustained high-load CPU warning), ☰ collapse, auto light/dark theme.
 
 ## Data sources
 
@@ -49,6 +49,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 | External IP | WebParser `https://api.ipify.org` (600 s) |
 | Weather | WebParser `https://wttr.in/#WeatherLoc#?format=%c|%t|%C|%h|%w|%f|%l&#WeatherUnits#` (900 s). Empty WeatherLoc = IP geolocation, empty WeatherUnits = regional units; wind unit is parsed, not hardcoded |
 | Ping | `Plugin=PingPlugin`, 1.1.1.1 |
+| Wi-Fi | `Measure=WiFiStatus` (Quality / SSID / PHY / AUTH / TXRate), `WiFiIntfID=#WiFiIntf#` |
 | Theme | Registry `HKCU\...\Themes\Personalize\AppsUseLightTheme` |
 
 ## Gotchas learned
@@ -70,6 +71,9 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 - `.rmskin` = zip (RMSKIN.ini + `Skins/...`) + 16-byte footer (int64 zip size, flags byte, `RMSKIN\0`).
 - Not possible without extra software: GPU temperature, CPU fan RPM (need HWiNFO / LibreHardwareMonitor; Win32_Fan is empty on this board).
 - Layout uses absolute `Y=` values. To insert a row, add 18 px to every `Y` at or below it (including `StyleCore`) and to `FullH`/`MiniH`/`BgH`.
+- **Wi-Fi row is dynamic:** `MeasureWiFiQuality` (0 = disconnected / no adapter) sets `WiFiRowH` (0 or `WiFiRowStep`=23) and `BgH` (`FullH` or `FullHWiFi`)
+  and shows/hides group `WiFi`. Meters below it use `Y=(N+#WiFiRowH#)` + `DynamicVariables=1`. When inserting rows above it, also bump `FullHWiFi`.
+  WiFiStatus has no RSSI; dBm = Quality/2 - 100 (Windows' own linear mapping). Win11 24H2+ needs location access for desktop apps.
 - Alerts: `MeasureTempAlert` toggles 1/0 each update while hot (blink); `MeasureLoadHigh` counts consecutive seconds ≥ `LoadAlert`. Hot color is owned by the alert measure, not `MeasureTemp`'s IfConditions.
 
 ## User's system (reference)
