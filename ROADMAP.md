@@ -37,6 +37,12 @@
 
 - [x] Wi-Fi row in Network (only while connected): signal bars, SSID, ≈dBm; tooltip with %, PHY, auth, link speed; click → Wi-Fi settings
 
+## ✅ Done (v1.5 – 2026-10-21)
+
+- [x] Battery row (only when a battery is present, via PowerPlugin `Status > 0`): battery icon with charge fill, %, On battery / On AC power; charge colors (accent > 30%, amber 11–30%, red ≤ 10%); click → Power settings
+- [x] Accent presets in the skin context menu (Coreglow default, Emerald, Sunset, Rose, Mono), written back to `Variables.inc` so the choice survives refreshes
+- [x] Row layout is now combination-safe: panel height = 691 + 23×(Wi-Fi connected) + 23×(battery present), reapplied by both row measures on every update
+
 ## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)
@@ -45,6 +51,7 @@
 - [ ] Scale variable (100% / 125% / 150%) for high-DPI screens
 - [ ] Media "now playing" row (NowPlaying / WebNowPlaying plugin)
 - [ ] Top-3 process lists (CPU and RAM) via UsageMonitor, replacing the single top-process row
+- [ ] Sunrise/sunset line (wttr.in JSON astronomy data, reuses the forecast parser)
 
 ## 💡 Ideas / maybe
 

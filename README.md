@@ -8,7 +8,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-1.4-8a5cff)
+![Version](https://img.shields.io/badge/version-1.5-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -32,10 +32,11 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 | 💾 **Storage** | C: drive usage plus live read/write speed |
 | 🌐 **Network** | External and LAN IP, adapter, ↓/↑ speed, ping, live traffic graph, total traffic |
 | 📶 **Wi-Fi** | Shown only while Wi-Fi is connected: signal bars, SSID and signal in dBm. Hover for %, band, security and link speed |
+| 🔋 **Battery** | Shown only on devices with a battery: charge icon, %, On battery / On AC power. Turns amber below 30% and red below 10%. Click for Power settings |
 | 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Location (shown above the weather) and units auto-detected by IP. Hover for feels-like |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
-| 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows |
+| 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent presets in the right-click menu |
 | 🖱️ **Click actions** | CPU → Task Manager · C: → Explorer · Network → Settings · Weather → forecast |
 
 ## Requirements
@@ -87,6 +88,11 @@ Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`.
 ## Roadmap
 
 See [ROADMAP.md](ROADMAP.md). Next up: GPU temperature via HWiNFO, a 3-day forecast, a settings panel and high-DPI scaling.
+
+## Accent presets
+
+Right-click the skin → **Accent: …** to switch the gradient: Coreglow (cyan/violet, default), Emerald, Sunset, Rose or Mono.
+The choice is saved to `@Resources\Variables.inc` and survives refreshes and reboots. Manual hex values still work via **Edit variables**.
 
 ## Credits
 

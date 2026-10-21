@@ -37,7 +37,7 @@ Your `Variables.inc` settings are kept when you upgrade.
 
 | Skin (Manage → …) | Contents |
 |---|---|
-| `Coreglow\Coreglow.ini` | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, click actions, hover glow, collapse button (☰), automatic light/dark theme |
+| `Coreglow\Coreglow.ini` | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, battery row (devices with a battery), accent presets, click actions, hover glow, collapse button (☰), automatic light/dark theme |
 
 ### Weather
 - Shown under the header as `T: 17°C | Partly Cloudy | H: 65% | W: 5 km/h`, from https://wttr.in.
@@ -66,6 +66,9 @@ Your `Variables.inc` settings are kept when you upgrade.
   On Windows 11 24H2+ turn on *Settings → Privacy & security → Location → Let desktop apps access your location*,
   otherwise Windows hides Wi-Fi details from Rainmeter and the row stays hidden. With several wireless adapters,
   change `WiFiIntf=` in `@Resources\Variables.inc`.
+- **Battery row** (Network section) appears only on devices with a battery: charge icon, percentage and
+  On battery / On AC power. It turns amber below 30% and red below 10%. Click it for Power settings.
+  Desktop PCs have no battery, so there the row is never shown.
 - Network speed uses only the main internet adapter (`Interface=Best`), so VMware, Hyper-V and Tailscale
   traffic isn't counted twice.
 - Click actions: the CPU ring and top process open Task Manager, C: opens Explorer, NETWORK opens Network settings,
@@ -87,6 +90,9 @@ thresholds (`TempWarn`, `TempHot`). Right-click → **Refresh skin** after savin
 
 **Important:** `Coreglow.ini` is saved as **UTF-16 LE** so the symbols (⚡ ° ↓ ↑ ☰) display correctly.
 Keep that encoding when you edit them (Notepad: *Save As* → Encoding *UTF-16 LE*).
+
+**Accent presets:** right-click the skin → **Accent: …** (Coreglow, Emerald, Sunset, Rose, Mono).
+These overwrite `Accent1`/`Accent2` in `@Resources\Variables.inc`.
 
 ## 5. Files
 
