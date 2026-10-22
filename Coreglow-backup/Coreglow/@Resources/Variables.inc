@@ -1,9 +1,7 @@
 [Variables]
 ; ===== Layout =====
-; Skin width in pixels
-W=300
-; Width of RAM/SWAP bars
-BarW=200
+; Skin width in pixels (bars, dividers, graph and per-core bars scale with it)
+PW=320
 ; Corner radius of the background panel
 Radius=16
 

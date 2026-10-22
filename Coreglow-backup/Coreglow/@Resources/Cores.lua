@@ -8,12 +8,14 @@ function Initialize()
   local n = tonumber(os.getenv('NUMBER_OF_PROCESSORS')) or 1
   local current = tonumber(SKIN:GetVariable('CoreCount', '0')) or 0
   local ver = tonumber(SKIN:GetVariable('CoresVer', '0')) or 0
-  if n == current and ver == VERSION then return end
+  local pw = tonumber(SKIN:GetVariable('PW', '320')) or 320
+  local builtPW = tonumber(SKIN:GetVariable('CoresPW', '0')) or 0
+  if n == current and ver == VERSION and pw == builtPW then return end
 
-  local area = tonumber(SKIN:GetVariable('PW', '320')) - 40
+  local area = pw - 40
   local step = area / n
   local w = math.max(step - 2, 1)
-  local out = { '[Variables]', 'CoreCount=' .. n, 'CoresVer=' .. VERSION, '' }
+  local out = { '[Variables]', 'CoreCount=' .. n, 'CoresVer=' .. VERSION, 'CoresPW=' .. pw, '' }
 
   -- bar color by load: accent < 50% <= amber < 80% <= red
   for i = 1, n do
