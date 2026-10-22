@@ -1,9 +1,7 @@
 [Variables]
 ; ===== Layout =====
-; Skin width in pixels
-W=300
-; Width of RAM/SWAP bars
-BarW=200
+; Skin width in pixels (bars, dividers, graph and per-core bars scale with it)
+PW=320
 ; Corner radius of the background panel
 Radius=16
 
@@ -18,7 +16,8 @@ TextColor=235,238,245,255
 LabelColor=150,158,175,255
 TrackColor=255,255,255,22
 DividerColor=255,255,255,20
-; Accent gradient (start -> end)
+; Accent gradient (start -> end). Click the header dot to cycle presets; AccentIdx = current preset (1-5)
+AccentIdx=1
 Accent1=0,200,255,255
 Accent2=150,90,255,255
 ; Network graph colors
