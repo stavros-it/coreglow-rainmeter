@@ -8,7 +8,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-1.5-8a5cff)
+![Version](https://img.shields.io/badge/version-1.6-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -36,7 +36,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 | 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Location (shown above the weather) and units auto-detected by IP. Hover for feels-like |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
-| 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent presets in the right-click menu |
+| 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent button (click the header dot) + presets in the right-click menu |
 | 🖱️ **Click actions** | CPU → Task Manager · C: → Explorer · Network → Settings · Weather → forecast |
 
 ## Requirements
@@ -66,6 +66,7 @@ See [INSTALL.md](Coreglow-backup/INSTALL.md) for details and troubleshooting.
 Right-click the skin → **Edit variables**, or edit `@Resources/Variables.inc`:
 
 ```ini
+PW=320                     ; skin width in pixels (bars scale with it)
 Accent1=0,200,255,255      ; gradient start (cyan)
 Accent2=150,90,255,255     ; gradient end (violet)
 TempWarn=60                ; °C → amber
@@ -91,8 +92,9 @@ See [ROADMAP.md](ROADMAP.md). Next up: GPU temperature via HWiNFO, a 3-day forec
 
 ## Accent presets
 
-Right-click the skin → **Accent: …** to switch the gradient: Coreglow (cyan/violet, default), Emerald, Sunset, Rose or Mono.
-The choice is saved to `@Resources\Variables.inc` and survives refreshes and reboots. Manual hex values still work via **Edit variables**.
+**Click the glowing dot** in the top-left of the header to cycle the gradient: Coreglow (cyan/violet, default) → Emerald → Sunset → Rose → Mono. Hovering shows a ring around the dot.
+You can also pick one directly: right-click the skin → **Accent: …**. Presets recolor the rings, bars, network graph and ↓/↑ speeds.
+The choice is saved to `@Resources\Variables.inc` and survives refreshes and reboots. Custom colors (`Accent1`, `Accent2`, `DownColor`, `UpColor` as R,G,B,A) still work via **Edit variables**.
 
 ## Credits
 
