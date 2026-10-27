@@ -24,7 +24,7 @@ Debug trick: temporarily add `OnUpdateAction=[!Log "[Measure:]"]` + `DynamicVari
 ```
 Coreglow\
 ├── Coreglow.ini           the skin (config "Coreglow")
-├── V2\CoreglowV2.ini        second skin (config "Coreglow\V2"): large-type card redesign, same 320x691
+├── Coreglow2\Coreglow2.ini        second skin (config "Coreglow\Coreglow2"): large-type card redesign, same 320x691
 └── @Resources\            shared by both (#@#)
     ├── Variables.inc      colors, font, thresholds, WeatherLoc, WeatherUnits
     ├── Theme0.inc / Theme1.inc / ThemeState.inc   dark/light theme + collapsed state
@@ -54,10 +54,10 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 | Battery | `Plugin=PowerPlugin` (`Status` = presence, `ACLine`, `Percent`); row shown only when `Status > 0` |
 | Theme | Registry `HKCU\...\Themes\Personalize\AppsUseLightTheme` |
 
-## Coreglow v2 skin
+## Coreglow2 skin
 
 - Measures are copied from Coreglow.ini (alerts use `!SetVariable CPURingColor/TempRingColor` because the rings are Shape arcs, not Roundline). Copy measure changes to both skins.
-- Own files: `@Resources\V2\Theme0/1.inc` (panel opacity, label contrast, card colors) and `@Resources\V2\State.inc` (`V2Collapsed`, so it collapses independently).
+- Own files: `@Resources\Coreglow2\Theme0/1.inc` (panel opacity, label contrast, card colors) and `@Resources\Coreglow2\State.inc` (`Coreglow2Collapsed`, so it collapses independently).
 - Ring arc = `Arc 42,7,X,Y,35,35,0,0,Large,0` with X/Y from Sin/Cos Calc measures; value clamped to 0.5-99.9% so the arc never vanishes.
 - Fonts: Segoe UI Variable Text for body (10-13 pt, min 10), Display for the clock and ring numbers.
 
