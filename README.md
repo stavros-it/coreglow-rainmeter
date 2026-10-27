@@ -8,7 +8,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-1.7-8a5cff)
+![Version](https://img.shields.io/badge/version-1.8-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
