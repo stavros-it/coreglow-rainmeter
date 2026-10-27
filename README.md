@@ -19,7 +19,20 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 <p align="center">
   <img src="docs/screenshot.png" alt="Coreglow skin on the Windows 11 desktop" width="320">
+  &nbsp;&nbsp;
+  <img src="docs/screenshot-lumen.png" alt="Coreglow Lumen skin" width="320">
 </p>
+
+<p align="center"><sub>Left: <b>Coreglow</b> · Right: <b>Coreglow Lumen</b></sub></p>
+
+## Two skins
+
+| Skin | Load | Style |
+|---|---|---|
+| **Coreglow** | `Coreglow\Coreglow.ini` | The original: compact rings, glowing bars, divider lines |
+| **Coreglow Lumen** | `Coreglow\Lumen\Lumen.ini` | Large-type card layout with the same data and size (320 × 691). Larger, higher-contrast text for comfortable reading on Full HD, round-capped rings, big clock |
+
+Both share `@Resources` (variables, accent presets, light/dark theme). Each one keeps its own collapse state. Load either one, or both.
 
 ## Features
 

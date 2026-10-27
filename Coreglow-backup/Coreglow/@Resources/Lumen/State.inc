@@ -1,0 +1,2 @@
+[Variables]
+LumenCollapsed=0
