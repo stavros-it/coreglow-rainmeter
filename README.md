@@ -8,7 +8,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-1.6-8a5cff)
+![Version](https://img.shields.io/badge/version-1.7-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -29,7 +29,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 | 🧵 **Per-thread load** | One bar per logical processor. Adapts to **any CPU** automatically and turns color with load |
 | 🎮 **GPU** | Usage ring and dedicated VRAM in use, read from Windows counters with no extra software |
 | 🧠 **Memory** | RAM and swap/commit bars with used / total |
-| 💾 **Storage** | C: drive usage plus live read/write speed |
+| 💾 **Storage** | C: drive usage plus live read/write speed and R/W activity bars |
 | 🌐 **Network** | External and LAN IP, adapter, ↓/↑ speed, ping, live traffic graph, total traffic |
 | 📶 **Wi-Fi** | Shown only while Wi-Fi is connected: signal bars, SSID and signal in dBm. Hover for %, band, security and link speed |
 | 🔋 **Battery** | Shown only on devices with a battery: charge icon, %, On battery / On AC power. Turns amber below 30% and red below 10%. Click for Power settings |
