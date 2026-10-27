@@ -23,7 +23,7 @@ Debug trick: temporarily add `OnUpdateAction=[!Log "[Measure:]"]` + `DynamicVari
 
 ```
 Coreglow\
-├── Coreglow.ini           the skin (config "Coreglow")
+├── Coreglow1\Coreglow1.ini  original skin (config "Coreglow\Coreglow1")
 ├── Coreglow2\Coreglow2.ini        second skin (config "Coreglow\Coreglow2"): large-type card redesign, same 320x691
 └── @Resources\            shared by both (#@#)
     ├── Variables.inc      colors, font, thresholds, WeatherLoc, WeatherUnits
@@ -56,7 +56,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 
 ## Coreglow2 skin
 
-- Measures are copied from Coreglow.ini (alerts use `!SetVariable CPURingColor/TempRingColor` because the rings are Shape arcs, not Roundline). Copy measure changes to both skins.
+- Measures are copied from Coreglow1.ini (alerts use `!SetVariable CPURingColor/TempRingColor` because the rings are Shape arcs, not Roundline). Copy measure changes to both skins.
 - Own files: `@Resources\Coreglow2\Theme0/1.inc` (panel opacity, label contrast, card colors) and `@Resources\Coreglow2\State.inc` (`Coreglow2Collapsed`, so it collapses independently).
 - Ring arc = `Arc 42,7,X,Y,35,35,0,0,Large,0` with X/Y from Sin/Cos Calc measures; value clamped to 0.5-99.9% so the arc never vanishes.
 - Fonts: Segoe UI Variable Text for body (10-13 pt, min 10), Display for the clock and ring numbers.

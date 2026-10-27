@@ -8,7 +8,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-2.0.1-8a5cff)
+![Version](https://img.shields.io/badge/version-2.0.2-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -23,13 +23,13 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
   <img src="docs/screenshot-coreglow2.png" alt="Coreglow2 skin" width="320">
 </p>
 
-<p align="center"><sub>Left: <b>Coreglow</b> · Right: <b>Coreglow2</b></sub></p>
+<p align="center"><sub>Left: <b>Coreglow1</b> · Right: <b>Coreglow2</b></sub></p>
 
 ## Two skins
 
 | Skin | Load | Style |
 |---|---|---|
-| **Coreglow** | `Coreglow\Coreglow.ini` | The original: compact rings, glowing bars, divider lines |
+| **Coreglow1** | `Coreglow\Coreglow1\Coreglow1.ini` | The original: compact rings, glowing bars, divider lines |
 | **Coreglow2** | `Coreglow\Coreglow2\Coreglow2.ini` | Large-type card layout with the same data and size (320 × 691). Larger, higher-contrast text for comfortable reading on Full HD, round-capped rings, big clock |
 
 Both share `@Resources` (variables, accent presets, light/dark theme). Each one keeps its own collapse state. Load either one, or both.
@@ -70,7 +70,7 @@ Everything else (UsageMonitor, PingPlugin, WebParser) comes with Rainmeter.
 
 **Option 2: manual**
 1. Copy `Coreglow-backup/Coreglow` to `%USERPROFILE%\Documents\Rainmeter\Skins\`.
-2. Rainmeter tray icon → **Refresh all** → **Manage** → **Coreglow → Coreglow.ini** → **Load**.
+2. Rainmeter tray icon → **Refresh all** → **Manage** → **Coreglow → Coreglow1 → Coreglow1.ini** (or **Coreglow2 → Coreglow2.ini**) → **Load**.
 
 See [INSTALL.md](Coreglow-backup/INSTALL.md) for details and troubleshooting.
 
@@ -90,7 +90,7 @@ WeatherUnits=              ; empty = automatic for the region, or m / u (imperia
 
 Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`.
 
-> **Note:** `Coreglow.ini` is saved as **UTF-16 LE** so that the symbols render. Keep that encoding when you edit it.
+> **Note:** `Coreglow1.ini` and `Coreglow2.ini` are saved as **UTF-16 LE** so that the symbols render. Keep that encoding when you edit them.
 
 ## Building the installer
 

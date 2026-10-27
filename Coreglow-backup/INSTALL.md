@@ -26,10 +26,10 @@ Your `Variables.inc` settings are kept when you upgrade.
 
 **Manually:**
 
-1. Copy the `Coreglow` folder (the one containing `Coreglow.ini` and `@Resources`) to:
+1. Copy the `Coreglow` folder (the one containing `Coreglow1`, `Coreglow2` and `@Resources`) to:
    `%USERPROFILE%\Documents\Rainmeter\Skins\`
 2. Right-click the Rainmeter tray icon → **Refresh all**.
-3. Right-click the tray icon → **Manage** → select **Coreglow → Coreglow.ini** → **Load**.
+3. Right-click the tray icon → **Manage** → select **Coreglow → Coreglow1 → Coreglow1.ini** (or **Coreglow2 → Coreglow2.ini**) → **Load**.
 4. Drag the skin wherever you like on the desktop. It may open at the top edge of the screen,
    behind windows. Press **Win + D** to show the desktop.
 
@@ -37,7 +37,7 @@ Your `Variables.inc` settings are kept when you upgrade.
 
 | Skin (Manage → …) | Contents |
 |---|---|
-| `Coreglow\Coreglow.ini` | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, battery row (devices with a battery), accent presets, click actions, hover glow, collapse button (☰), automatic light/dark theme |
+| `Coreglow\Coreglow1\Coreglow1.ini` | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, battery row (devices with a battery), accent presets, click actions, hover glow, collapse button (☰), automatic light/dark theme |
 
 ### Weather
 - Shown under the header as `T: 17°C | Partly Cloudy | H: 65% | W: 5 km/h`, from https://wttr.in.
@@ -86,9 +86,9 @@ Right-click the skin → **Custom skin actions** → **Edit variables** (or open
 thresholds (`TempWarn`, `TempHot`). Right-click → **Refresh skin** after saving.
 
 - Font sizes: the `FontSize=` lines in the `Style...` sections of each `.ini`.
-- Ping target: `PingHost=` in the `[Variables]` section of `Coreglow.ini`.
+- Ping target: `PingHost=` in the `[Variables]` section of `Coreglow1.ini` / `Coreglow2.ini`.
 
-**Important:** `Coreglow.ini` is saved as **UTF-16 LE** so the symbols (⚡ ° ↓ ↑ ☰) display correctly.
+**Important:** `Coreglow1.ini` and `Coreglow2.ini` are saved as **UTF-16 LE** so the symbols (⚡ ° ↓ ↑ ☰) display correctly.
 Keep that encoding when you edit them (Notepad: *Save As* → Encoding *UTF-16 LE*).
 
 **Accent presets:** right-click the skin → **Accent: …** (Coreglow, Emerald, Sunset, Rose, Mono).
@@ -98,7 +98,7 @@ These overwrite `Accent1`/`Accent2` in `@Resources\Variables.inc`.
 
 ```
 Coreglow\
-├── Coreglow.ini           the skin
+├── Coreglow1\Coreglow1.ini  original skin
 └── @Resources\
     ├── Variables.inc      colors, font, thresholds, weather location (shared)
     ├── Cores.lua          builds the per-thread bars for the current CPU

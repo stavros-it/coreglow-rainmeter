@@ -23,7 +23,7 @@ Version=$Version
 MinimumRainmeter=4.5.6
 MinimumWindows=10.0
 LoadType=Skin
-Load=Coreglow\Coreglow.ini
+Load=Coreglow\Coreglow1\Coreglow1.ini
 VariableFiles=Coreglow\@Resources\Variables.inc
 "@ | Set-Content "$stage\RMSKIN.ini" -Encoding Unicode
 
