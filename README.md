@@ -8,7 +8,8 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-2.0.2-8a5cff)
+![Coreglow1](https://img.shields.io/badge/Coreglow1-1.8-00c8ff)
+![Coreglow2](https://img.shields.io/badge/Coreglow2-1.0-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -29,10 +30,10 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 | Skin | Load | Style |
 |---|---|---|
-| **Coreglow1** | `Coreglow\Coreglow1\Coreglow1.ini` | The original: compact rings, glowing bars, divider lines |
-| **Coreglow2** | `Coreglow\Coreglow2\Coreglow2.ini` | Large-type card layout with the same data and size (320 × 691). Larger, higher-contrast text for comfortable reading on Full HD, round-capped rings, big clock |
+| **Coreglow1** | `Coreglow1\Coreglow1.ini` | The original: compact rings, glowing bars, divider lines |
+| **Coreglow2** | `Coreglow2\Coreglow2.ini` | Large-type card layout with the same data and size (320 × 691). Larger, higher-contrast text for comfortable reading on Full HD, round-capped rings, big clock |
 
-Both share `@Resources` (variables, accent presets, light/dark theme). Each one keeps its own collapse state. Load either one, or both.
+Each skin is its own folder with its own `@Resources` (variables, accent preset, theme files, collapse state), so you can install, load and customize either one, or both, independently.
 
 ## Features
 
@@ -65,18 +66,18 @@ Everything else (UsageMonitor, PingPlugin, WebParser) comes with Rainmeter.
 ## Installation
 
 **Option 1: installer (recommended)**
-1. Download `Coreglow_x.y.rmskin` from the [Releases](../../releases) page.
-2. Double-click it, then click **Install**.
+1. Download `Coreglow1_x.y.rmskin` and/or `Coreglow2_x.y.rmskin` from the [Releases](../../releases) page.
+2. Double-click it, then click **Install**. Each installer only touches its own skin folder.
 
 **Option 2: manual**
-1. Copy `Coreglow-backup/Coreglow` to `%USERPROFILE%\Documents\Rainmeter\Skins\`.
-2. Rainmeter tray icon → **Refresh all** → **Manage** → **Coreglow → Coreglow1 → Coreglow1.ini** (or **Coreglow2 → Coreglow2.ini**) → **Load**.
+1. Copy `Coreglow-backup/Coreglow1` and/or `Coreglow-backup/Coreglow2` to `%USERPROFILE%\Documents\Rainmeter\Skins\`.
+2. Rainmeter tray icon → **Refresh all** → **Manage** → **Coreglow1 → Coreglow1.ini** (or **Coreglow2 → Coreglow2.ini**) → **Load**.
 
 See [INSTALL.md](Coreglow-backup/INSTALL.md) for details and troubleshooting.
 
 ## Customization
 
-Right-click the skin → **Edit variables**, or edit `@Resources/Variables.inc`:
+Right-click the skin → **Edit variables**, or edit that skin's `@Resources/Variables.inc`:
 
 ```ini
 PW=320                     ; skin width in pixels (bars scale with it)
@@ -88,15 +89,16 @@ WeatherLoc=                ; empty = auto-detect from your IP, or a city, airpor
 WeatherUnits=              ; empty = automatic for the region, or m / u (imperial) / M (wind m/s)
 ```
 
-Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`.
+Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`. Coreglow2 adds its own overrides in `@Resources/Coreglow2/`.
 
 > **Note:** `Coreglow1.ini` and `Coreglow2.ini` are saved as **UTF-16 LE** so that the symbols render. Keep that encoding when you edit them.
 
 ## Building the installer
 
 ```powershell
-.\tools\sync.ps1                       # copy the live skin from Documents\Rainmeter\Skins into the repo
-.\tools\build-rmskin.ps1 -Version 1.1  # → dist\Coreglow_1.1.rmskin
+.\tools\sync.ps1                                        # copy both live skins from Documents\Rainmeter\Skins into the repo
+.\tools\build-rmskin.ps1 -Skin Coreglow1 -Version 1.8   # → dist\Coreglow1_1.8.rmskin
+.\tools\build-rmskin.ps1 -Skin Coreglow2 -Version 1.0   # → dist\Coreglow2_1.0.rmskin
 ```
 
 ## Roadmap
@@ -107,7 +109,7 @@ See [ROADMAP.md](ROADMAP.md). Next up: GPU temperature via HWiNFO, a 3-day forec
 
 **Click the glowing dot** in the top-left of the header to cycle the gradient: Coreglow (cyan/violet, default) → Emerald → Sunset → Rose → Mono. Hovering shows a ring around the dot.
 You can also pick one directly: right-click the skin → **Accent: …**. Presets recolor the rings, bars, network graph and ↓/↑ speeds.
-The choice is saved to `@Resources\Variables.inc` and survives refreshes and reboots. Custom colors (`Accent1`, `Accent2`, `DownColor`, `UpColor` as R,G,B,A) still work via **Edit variables**.
+The choice is saved to that skin's `@Resources\Variables.inc` and survives refreshes and reboots. Custom colors (`Accent1`, `Accent2`, `DownColor`, `UpColor` as R,G,B,A) still work via **Edit variables**.
 
 ## Credits
 

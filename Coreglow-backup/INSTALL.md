@@ -21,15 +21,15 @@ Nothing else is needed. The other plugins used (UsageMonitor, PingPlugin, WebPar
 
 ## 2. Install the skin
 
-**Easiest:** double-click `dist\Coreglow_1.1.rmskin` and click **Install**. Rainmeter copies the skin and loads it.
+**Easiest:** double-click `Coreglow1_x.y.rmskin` or `Coreglow2_x.y.rmskin` (from the Releases page or `dist\`) and click **Install**. Rainmeter copies that skin into its own folder and loads it.
 Your `Variables.inc` settings are kept when you upgrade.
 
 **Manually:**
 
-1. Copy the `Coreglow` folder (the one containing `Coreglow1`, `Coreglow2` and `@Resources`) to:
+1. Copy the `Coreglow1` and/or `Coreglow2` folder (each contains its `.ini` and its own `@Resources`) to:
    `%USERPROFILE%\Documents\Rainmeter\Skins\`
 2. Right-click the Rainmeter tray icon → **Refresh all**.
-3. Right-click the tray icon → **Manage** → select **Coreglow → Coreglow1 → Coreglow1.ini** (or **Coreglow2 → Coreglow2.ini**) → **Load**.
+3. Right-click the tray icon → **Manage** → select **Coreglow1 → Coreglow1.ini** (or **Coreglow2 → Coreglow2.ini**) → **Load**.
 4. Drag the skin wherever you like on the desktop. It may open at the top edge of the screen,
    behind windows. Press **Win + D** to show the desktop.
 
@@ -37,7 +37,7 @@ Your `Variables.inc` settings are kept when you upgrade.
 
 | Skin (Manage → …) | Contents |
 |---|---|
-| `Coreglow\Coreglow1\Coreglow1.ini` | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, battery row (devices with a battery), accent presets, click actions, hover glow, collapse button (☰), automatic light/dark theme |
+| `Coreglow1\Coreglow1.ini` (Coreglow2 shows the same data in a large-type card layout) | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, battery row (devices with a battery), accent presets, click actions, hover glow, collapse button (☰), automatic light/dark theme |
 
 ### Weather
 - Shown under the header as `T: 17°C | Partly Cloudy | H: 65% | W: 5 km/h`, from https://wttr.in.
@@ -97,8 +97,8 @@ These overwrite `Accent1`/`Accent2` in `@Resources\Variables.inc`.
 ## 5. Files
 
 ```
-Coreglow\
-├── Coreglow1\Coreglow1.ini  original skin
+Coreglow1\                 (Coreglow2\ has the same layout, plus @Resources\Coreglow2\ for its theme and collapse state)
+├── Coreglow1.ini          the skin
 └── @Resources\
     ├── Variables.inc      colors, font, thresholds, weather location (shared)
     ├── Cores.lua          builds the per-thread bars for the current CPU

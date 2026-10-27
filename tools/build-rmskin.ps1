@@ -1,38 +1,31 @@
-# Builds dist\<name>_<version>.rmskin from Coreglow-backup\Coreglow.
-# -Skin Coreglow1 / Coreglow2 packages only that skin (plus shared @Resources);
-# without -Skin both skins are packaged and Coreglow1 is loaded.
+# Builds dist\<Skin>_<version>.rmskin from Coreglow-backup\<Skin>.
+# Each skin is its own root config (Skins\Coreglow1, Skins\Coreglow2), so the two installers don't overwrite each other.
 # An .rmskin is a zip (RMSKIN.ini + Skins\...) followed by a 16-byte footer:
 # int64 zip size, 1 byte flags, "RMSKIN\0".
-param([string]$Version = '1.4', [ValidateSet('', 'Coreglow1', 'Coreglow2')][string]$Skin = '')
+param([string]$Version = '1.0', [Parameter(Mandatory)][ValidateSet('Coreglow1', 'Coreglow2')][string]$Skin)
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $root  = Split-Path $PSScriptRoot -Parent
-$src   = "$root\Coreglow-backup\Coreglow"
+$src   = "$root\Coreglow-backup\$Skin"
 $stage = Join-Path ([IO.Path]::GetTempPath()) "coreglow-rmskin"
 $dist  = "$root\dist"
-$name  = if ($Skin) { $Skin } else { 'Coreglow' }
-$load  = if ($Skin) { $Skin } else { 'Coreglow1' }
-$out   = "$dist\$($name)_$Version.rmskin"
+$out   = "$dist\$($Skin)_$Version.rmskin"
 
 if (Test-Path $stage) { Remove-Item $stage -Recurse -Force }
 New-Item -ItemType Directory "$stage\Skins" -Force | Out-Null
 New-Item -ItemType Directory $dist -Force | Out-Null
-Copy-Item $src "$stage\Skins\Coreglow" -Recurse
-
-# Single-skin package: drop the other skin and its own resources
-if ($Skin -eq 'Coreglow1') { Remove-Item "$stage\Skins\Coreglow\Coreglow2", "$stage\Skins\Coreglow\@Resources\Coreglow2" -Recurse -Force }
-if ($Skin -eq 'Coreglow2') { Remove-Item "$stage\Skins\Coreglow\Coreglow1" -Recurse -Force }
+Copy-Item $src "$stage\Skins\$Skin" -Recurse
 
 @"
 [rmskin]
-Name=$name
+Name=$Skin
 Author=Stavros Antoniou
 Version=$Version
 MinimumRainmeter=4.5.6
 MinimumWindows=10.0
 LoadType=Skin
-Load=Coreglow\$load\$load.ini
-VariableFiles=Coreglow\@Resources\Variables.inc
+Load=$Skin\$Skin.ini
+VariableFiles=$Skin\@Resources\Variables.inc
 "@ | Set-Content "$stage\RMSKIN.ini" -Encoding Unicode
 
 if (Test-Path $out) { Remove-Item $out }

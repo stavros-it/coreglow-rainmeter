@@ -7,7 +7,7 @@ Owner: Stavros. Started 2026-10-07.
 
 | What | Path |
 |---|---|
-| Live skin (what Rainmeter runs) | `%USERPROFILE%\Documents\Rainmeter\Skins\Coreglow\` |
+| Live skins (what Rainmeter runs) | `%USERPROFILE%\Documents\Rainmeter\Skins\Coreglow1\` and `...\Skins\Coreglow2\` (separate root configs) |
 | Backup + install guide | `Coreglow-backup\` (in repo) (`INSTALL.md`) |
 | Rainmeter settings / log | `%APPDATA%\Rainmeter\Rainmeter.ini`, `Rainmeter.log` (logging OFF; turn it on to debug) |
 | Core Temp plugin | `C:\Program Files\Rainmeter\Plugins\CoreTemp.dll` |
@@ -16,16 +16,18 @@ Owner: Stavros. Started 2026-10-07.
 
 **Workflow:** edit the live skin → `Rainmeter.exe !Refresh "<config>"` → check the log
 (`!WriteKeyValue Rainmeter Logging 1 "%APPDATA%\Rainmeter\Rainmeter.ini"`) → `tools\sync.ps1` →
-`tools\build-rmskin.ps1 -Version x.y` → git commit.
+`tools\build-rmskin.ps1 -Skin Coreglow1|Coreglow2 -Version x.y` → git commit. Releases are per skin (tags `coreglow1-vX.Y`, `coreglow2-vX.Y`).
 Debug trick: temporarily add `OnUpdateAction=[!Log "[Measure:]"]` + `DynamicVariables=1` to a measure.
 
 ## Structure
 
 ```
-Coreglow\
-├── Coreglow1\Coreglow1.ini  original skin (config "Coreglow\Coreglow1")
-├── Coreglow2\Coreglow2.ini        second skin (config "Coreglow\Coreglow2"): large-type card redesign, same 320x691
-└── @Resources\            shared by both (#@#)
+Coreglow1\                 original skin (config "Coreglow1")
+├── Coreglow1.ini
+└── @Resources\            its own copy (#@#)
+Coreglow2\                 large-type card redesign, same 320x691 (config "Coreglow2")
+├── Coreglow2.ini
+└── @Resources\            own copy, plus Coreglow2\ (theme overrides, collapse state)
     ├── Variables.inc      colors, font, thresholds, WeatherLoc, WeatherUnits
     ├── Theme0.inc / Theme1.inc / ThemeState.inc   dark/light theme + collapsed state
     ├── Cores.lua          generates Cores.inc (per-thread bars) from NUMBER_OF_PROCESSORS
@@ -56,7 +58,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 
 ## Coreglow2 skin
 
-- Measures are copied from Coreglow1.ini (alerts use `!SetVariable CPURingColor/TempRingColor` because the rings are Shape arcs, not Roundline). Copy measure changes to both skins.
+- Measures are copied from Coreglow1.ini (alerts use `!SetVariable CPURingColor/TempRingColor` because the rings are Shape arcs, not Roundline). Copy measure changes to both skins. Shared resource files (Accent.lua, Cores.lua, Variables.inc) are duplicated per skin since 2026-10-27; edit both.
 - Own files: `@Resources\Coreglow2\Theme0/1.inc` (panel opacity, label contrast, card colors) and `@Resources\Coreglow2\State.inc` (`Coreglow2Collapsed`, so it collapses independently).
 - Ring arc = `Arc 42,7,X,Y,35,35,0,0,Large,0` with X/Y from Sin/Cos Calc measures; value clamped to 0.5-99.9% so the arc never vanishes.
 - Fonts: Segoe UI Variable Text for body (10-13 pt, min 10), Display for the clock and ring numbers.
