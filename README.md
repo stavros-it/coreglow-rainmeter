@@ -8,7 +8,7 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Version](https://img.shields.io/badge/version-1.8-8a5cff)
+![Version](https://img.shields.io/badge/version-2.0-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -20,17 +20,17 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 <p align="center">
   <img src="docs/screenshot.png" alt="Coreglow skin on the Windows 11 desktop" width="320">
   &nbsp;&nbsp;
-  <img src="docs/screenshot-lumen.png" alt="Coreglow Lumen skin" width="320">
+  <img src="docs/screenshot-v2.png" alt="Coreglow v2 skin" width="320">
 </p>
 
-<p align="center"><sub>Left: <b>Coreglow</b> · Right: <b>Coreglow Lumen</b></sub></p>
+<p align="center"><sub>Left: <b>Coreglow</b> · Right: <b>Coreglow v2</b></sub></p>
 
 ## Two skins
 
 | Skin | Load | Style |
 |---|---|---|
 | **Coreglow** | `Coreglow\Coreglow.ini` | The original: compact rings, glowing bars, divider lines |
-| **Coreglow Lumen** | `Coreglow\Lumen\Lumen.ini` | Large-type card layout with the same data and size (320 × 691). Larger, higher-contrast text for comfortable reading on Full HD, round-capped rings, big clock |
+| **Coreglow v2** | `Coreglow\V2\CoreglowV2.ini` | Large-type card layout with the same data and size (320 × 691). Larger, higher-contrast text for comfortable reading on Full HD, round-capped rings, big clock |
 
 Both share `@Resources` (variables, accent presets, light/dark theme). Each one keeps its own collapse state. Load either one, or both.
 

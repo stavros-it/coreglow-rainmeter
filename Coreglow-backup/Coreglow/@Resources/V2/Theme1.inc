@@ -1,5 +1,5 @@
 [Variables]
-; Lumen light
+; Coreglow v2 light
 BgColor=246,247,251,248
 BgColor2=234,231,250,248
 LabelColor=82,90,108,255
