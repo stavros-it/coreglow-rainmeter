@@ -37,11 +37,11 @@ TempHotDim=255,70,80,90
 LoadAlert=90
 LoadAlertSecs=30
 
-; ===== Weather (wttr.in) =====
-; Location: city, airport code or lat,lon. Leave empty to auto-detect from your public IP.
+; ===== Weather (Open-Meteo) =====
+; Location: a place name (e.g. Athens, New York). Leave empty to use the Windows location (Settings > Privacy > Location must be on).
 WeatherLoc=
-; Units: empty = automatic for the region (US -> imperial, elsewhere metric), m = metric, u = imperial (°F, mph), M = metric with wind in m/s
-WeatherUnits=
+; Units: m = metric (°C, km/h), u = imperial (°F, mph), ms = metric with wind in m/s
+WeatherUnits=m
 
 ; ===== Wi-Fi =====
 ; Wireless adapter index for the Wi-Fi row (shown only while Wi-Fi is connected). Try 1, 2... if 0 shows nothing.
