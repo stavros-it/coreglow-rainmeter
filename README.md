@@ -51,7 +51,7 @@ Each skin is its own folder with its own `@Resources` (variables, accent preset,
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
 | 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent button (click the header dot) + presets in the right-click menu |
-| 🖱️ **Click actions** | CPU → Task Manager · C: → Explorer · Network → Settings · Weather → forecast |
+| 🖱️ **Click actions** | CPU % → Task Manager sorted by CPU · GPU % → by GPU · RAM → by Memory · C: → Explorer · Network → Settings · Weather → forecast |
 
 ## Requirements
 

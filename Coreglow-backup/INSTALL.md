@@ -70,7 +70,7 @@ Your `Variables.inc` settings are kept when you upgrade.
   Desktop PCs have no battery, so there the row is never shown.
 - Network speed uses only the main internet adapter (`Interface=Best`), so VMware, Hyper-V and Tailscale
   traffic isn't counted twice.
-- Click actions: the CPU ring and top process open Task Manager, C: opens Explorer, NETWORK opens Network settings,
+- Click actions: the CPU % and the top process open Task Manager sorted by CPU, the GPU % opens it sorted by GPU, and the RAM line opens it sorted by Memory (if Task Manager is already open it only comes to the front and keeps its sort), C: opens Explorer, NETWORK opens Network settings,
   and the weather line opens the forecast.
 - Thread bars turn amber at 50% load and red at 80%. Hover over a bar to see its exact %.
 - ☰ (top-right) folds away the Memory, Storage and Network sections. The skin remembers this after refreshes and reboots.
