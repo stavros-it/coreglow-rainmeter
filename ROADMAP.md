@@ -30,7 +30,7 @@
 
 ## ✅ Done (v1.3 – 2026-10-09)
 
-- [x] Weather moved from wttr.in to Open-Meteo; location from the Windows Location Service (empty `WeatherLoc`) or a place name; `WeatherUnits`: m / u / ms
+- [x] Weather auto-detects the location from the public IP (empty `WeatherLoc`) and uses regional units (`WeatherUnits`: auto / m / u / M); location shown in the tooltip (superseded in v2.1)
 - [x] Location name on its own line above the weather (layout shifted down 18 px, `FullH` 664 / `MiniH` 304)
 
 ## ✅ Done (v1.4 – 2026-10-21)
@@ -43,10 +43,20 @@
 - [x] Accent presets in the skin context menu (Coreglow default, Emerald, Sunset, Rose, Mono), written back to `Variables.inc` so the choice survives refreshes
 - [x] Row layout is now combination-safe: panel height = 691 + 23×(Wi-Fi connected) + 23×(battery present), reapplied by both row measures on every update
 
+## ✅ Done (v2.1 / v2.1.1 – 2026-11-03: Coreglow1 1.9.1, Coreglow2 1.1.1)
+
+- [x] Weather moved from wttr.in (outage) to Open-Meteo, no API key; `@Resources\Weather.inc` shared by both skins
+- [x] Location from the Windows Location Service (`GetLocation.ps1`, run hidden, read once at load and every 6 h, saved position reused), or a place name in `WeatherLoc` (Open-Meteo geocoding); no IP lookup; tooltip shows place name and coordinates (bigdatacloud reverse geocoding)
+- [x] `WeatherUnits`: m (default) / u (°F, mph) / ms (wind in m/s)
+- [x] Weather line: short condition names, drop icon + humidity, wind symbol + direction arrow + Beaufort force; description, humidity, wind and their icons colored green / yellow / orange / red by severity (`Alert*` variables)
+- [x] Click CPU % / top process, GPU % or RAM to open Task Manager sorted by CPU / GPU / Memory (edits Task Manager's `settings.json`, no admin rights)
+- [x] Themed hover cards (`Tip.lua`, `TipBg`, accent border) replace the native tooltips and follow the light/dark theme and accent presets
+- [x] Per-skin releases, `.rmskin` packages and GitHub releases v2.1 / v2.1.1
 ## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)
 - [ ] Weather forecast tooltip or popup for the next 3 days (Open-Meteo `daily` data + Lua parsing)
+- [ ] Click the temp ring to show the Core Temp window (blocked: Core Temp runs elevated, needs admin rights)
 - [ ] Settings panel skin: accent color picker, scale, choice of sections, weather location
 - [ ] Scale variable (100% / 125% / 150%) for high-DPI screens
 - [ ] Media "now playing" row (NowPlaying / WebNowPlaying plugin)
@@ -65,3 +75,5 @@
 - GPU temperature requires HWiNFO (Windows exposes no counter for it).
 - SWAP shows commit charge, not pagefile usage.
 - Open-Meteo can be unreachable. The weather then shows "Weather unavailable" until the next refresh.
+- Task Manager opens sorted by the clicked column only when it is not already running (it reads its sort at start-up; an open window keeps its sort).
+- Windows shows its location icon briefly whenever the skin reads the location (at load and every 6 hours). Set `WeatherLoc` to a place name to avoid it.
