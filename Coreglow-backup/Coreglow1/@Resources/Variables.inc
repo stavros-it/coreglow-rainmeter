@@ -48,3 +48,9 @@ WeatherUnits=m
 ; ===== Wi-Fi =====
 ; Wireless adapter index for the Wi-Fi row (shown only while Wi-Fi is connected). Try 1, 2... if 0 shows nothing.
 WiFiIntf=0
+
+; Weather description colours by severity
+AlertGreen=60,220,140,255
+AlertYellow=255,214,64,255
+AlertOrange=255,140,40,255
+AlertRed=255,70,80,255

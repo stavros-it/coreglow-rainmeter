@@ -40,14 +40,14 @@ Your `Variables.inc` settings are kept when you upgrade.
 | `Coreglow1\Coreglow1.ini` (Coreglow2 shows the same data in a large-type card layout) | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, battery row (devices with a battery), accent presets, click actions, hover glow, collapse button (☰), automatic light/dark theme |
 
 ### Weather
-- Shown under the header as `🌤️ 17°C  Partly cloudy  H 65%`, from [Open-Meteo](https://open-meteo.com) (no API key).
+- Shown under the header as `🌤️ 17°C  Partly cloudy  💧65%  ≋↑3` (wind arrow = where it blows towards, number = Beaufort force), from [Open-Meteo](https://open-meteo.com) (no API key).
 - Refreshes every 15 minutes. Click it to open the location on windy.com.
 - Location: `WeatherLoc=` in `@Resources\Variables.inc`. Empty (the default) uses the Windows Location Service
   (Settings > Privacy & security > Location must be on; Windows shows its location icon briefly when the skin reads it,
   at load and every 6 hours). Or pin a place name (`Athens`, `New York`), which skips Windows location entirely.
 - Units: `WeatherUnits=` `m` (default: °C, km/h), `u` (°F, mph) or `ms` (°C, wind in m/s).
 - Shows "Weather unavailable" if Open-Meteo can't be reached and "Location not found" if `WeatherLoc` can't be resolved.
-- Starts with a weather icon (🌤️). Hover over the line to see the feels-like temperature.
+- Starts with a weather icon (🌤️). Description, humidity and wind are colored by severity: green / yellow / orange / red (description by condition, humidity by comfort range 30-60 % green, wind by Beaufort force 0-3 / 4-5 / 6-7 / 8+). Colors are `AlertGreen/Yellow/Orange/Red` in `Variables.inc`. Hover over the line to see the place, feels-like temperature and wind (with unit and Beaufort force).
 
 ### Tooltips
 - Hover over the **CPU** or **Max Temp** ring to see the min and max since the skin loaded, and the average over the last hour.

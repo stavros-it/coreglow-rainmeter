@@ -8,8 +8,8 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Coreglow1](https://img.shields.io/badge/Coreglow1-1.9-00c8ff)
-![Coreglow2](https://img.shields.io/badge/Coreglow2-1.1-8a5cff)
+![Coreglow1](https://img.shields.io/badge/Coreglow1-1.9.1-00c8ff)
+![Coreglow2](https://img.shields.io/badge/Coreglow2-1.1.1-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -47,7 +47,7 @@ Each skin is its own folder with its own `@Resources` (variables, accent preset,
 | 🌐 **Network** | External and LAN IP, adapter, ↓/↑ speed, ping, live traffic graph, total traffic |
 | 📶 **Wi-Fi** | Shown only while Wi-Fi is connected: signal bars, SSID and signal in dBm. Hover for %, band, security and link speed |
 | 🔋 **Battery** | Shown only on devices with a battery: charge icon, %, On battery / On AC power. Turns amber below 30% and red below 10%. Click for Power settings |
-| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [Open-Meteo](https://open-meteo.com). Location from Windows Location Service (or a city you set). Hover for feels-like |
+| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind (direction arrow + Beaufort force), icons and values colored green / yellow / orange / red by severity like weather alerts, from [Open-Meteo](https://open-meteo.com). Location from Windows Location Service (or a city you set). Hover for feels-like |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
 | 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent button (click the header dot) + presets in the right-click menu, themed hover cards (follow the accent and light/dark theme) instead of the plain Windows tooltips |
@@ -97,8 +97,8 @@ Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`. Coreglow
 
 ```powershell
 .\tools\sync.ps1                                        # copy both live skins from Documents\Rainmeter\Skins into the repo
-.\tools\build-rmskin.ps1 -Skin Coreglow1 -Version 1.9   # → dist\Coreglow1_1.9.rmskin
-.\tools\build-rmskin.ps1 -Skin Coreglow2 -Version 1.1   # → dist\Coreglow2_1.1.rmskin
+.\tools\build-rmskin.ps1 -Skin Coreglow1 -Version 1.9.1   # → dist\Coreglow1_1.9.1.rmskin
+.\tools\build-rmskin.ps1 -Skin Coreglow2 -Version 1.1.1   # → dist\Coreglow2_1.1.1.rmskin
 ```
 
 ## Roadmap
