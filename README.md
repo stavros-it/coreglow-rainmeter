@@ -8,8 +8,8 @@ CPU · GPU · temperature · power · RAM · network · weather, all in one clea
 
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-4.5.6%2B-1e90ff)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4)
-![Coreglow1](https://img.shields.io/badge/Coreglow1-1.8-00c8ff)
-![Coreglow2](https://img.shields.io/badge/Coreglow2-1.0-8a5cff)
+![Coreglow1](https://img.shields.io/badge/Coreglow1-1.9-00c8ff)
+![Coreglow2](https://img.shields.io/badge/Coreglow2-1.1-8a5cff)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -97,8 +97,8 @@ Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`. Coreglow
 
 ```powershell
 .\tools\sync.ps1                                        # copy both live skins from Documents\Rainmeter\Skins into the repo
-.\tools\build-rmskin.ps1 -Skin Coreglow1 -Version 1.8   # → dist\Coreglow1_1.8.rmskin
-.\tools\build-rmskin.ps1 -Skin Coreglow2 -Version 1.0   # → dist\Coreglow2_1.0.rmskin
+.\tools\build-rmskin.ps1 -Skin Coreglow1 -Version 1.9   # → dist\Coreglow1_1.9.rmskin
+.\tools\build-rmskin.ps1 -Skin Coreglow2 -Version 1.1   # → dist\Coreglow2_1.1.rmskin
 ```
 
 ## Roadmap
