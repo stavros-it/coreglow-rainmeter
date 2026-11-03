@@ -38,7 +38,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 
 ## Features
 
-- **Features:** weather (wttr.in), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
+- **Features:** weather (Open-Meteo), CPU % ring, CPU max temp ring (green/amber/red), CPU power W, CPU clock MHz,
   RAM/SWAP bars, external IP, ↓/↑ speed + graph, uptime.
   plus GPU % ring + VRAM, per-thread bars (auto for any CPU), CPU name, clock/date, top process,
   C: usage + R/W, LAN IP + adapter, Wi-Fi row (bars, SSID, dBm; only while connected), ping, total traffic, click actions, hover glow, alerts (blinking hot temp ring, sustained high-load CPU warning), ☰ collapse, auto light/dark theme.
@@ -50,7 +50,7 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 | Temp / power / clock / CPU name | `Plugin=CoreTemp`, `CoreTempType=MaxTemperature / Power / CpuSpeed / CpuName` |
 | GPU %, VRAM, disk R/W, top process | `Plugin=UsageMonitor` (Alias GPU / VRAM / CPU, Category LogicalDisk) |
 | External IP | WebParser `https://api.ipify.org` (600 s) |
-| Weather | WebParser `https://wttr.in/#WeatherLoc#?format=%c|%t|%C|%h|%w|%f|%l&#WeatherUnits#` (900 s). Empty WeatherLoc = IP geolocation, empty WeatherUnits = regional units; wind unit is parsed, not hardcoded |
+| Weather | `@Resources\Weather.inc` (included by both skins). WebParser on `api.open-meteo.com/v1/forecast` (900 s); `Weather.lua` builds the URL once lat/lon are known. Location: `WeatherLoc` place name -> Open-Meteo geocoding, empty -> `GetLocation.ps1` (Windows Location Service, run hidden via `GetLocation.vbs` at load + every 6 h) writes `Location.txt` (git-ignored). `WeatherUnits` = m / u / ms. WMO weather code mapped to icon/description with plain `Substitute`. Gotchas: no `[ ]` in options of a DynamicVariables measure; WebParser URL cannot take measure refs (hence the Lua) |
 | Ping | `Plugin=PingPlugin`, 1.1.1.1 |
 | Wi-Fi | `Measure=WiFiStatus` (Quality / SSID / PHY / AUTH / TXRate), `WiFiIntfID=#WiFiIntf#` |
 | Battery | `Plugin=PowerPlugin` (`Status` = presence, `ACLine`, `Percent`); row shown only when `Status > 0` |
@@ -90,4 +90,4 @@ Formerly named CoreStats (Classic + Pro variants). Renamed to Coreglow on 2026-1
 ## User's system (reference)
 
 AMD Ryzen 7 5700X (8C/16T), AMD Radeon RX 7600, MSI MS-7C56 desktop, Realtek GbE (wired, no Wi-Fi, no battery).
-Weather location pinned to LGIR (Heraklion) in the live skin only (since 2026-10-09). `sync.ps1` clears `WeatherLoc` in the backup so the repo ships auto-detect. Only C: drive wanted in Storage.
+Weather location was pinned to LGIR (Heraklion) in the live skin only (since 2026-10-09). `sync.ps1` clears `WeatherLoc` in the backup so the repo ships Windows-location mode. Only C: drive wanted in Storage.

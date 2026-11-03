@@ -47,7 +47,7 @@ Each skin is its own folder with its own `@Resources` (variables, accent preset,
 | 🌐 **Network** | External and LAN IP, adapter, ↓/↑ speed, ping, live traffic graph, total traffic |
 | 📶 **Wi-Fi** | Shown only while Wi-Fi is connected: signal bars, SSID and signal in dBm. Hover for %, band, security and link speed |
 | 🔋 **Battery** | Shown only on devices with a battery: charge icon, %, On battery / On AC power. Turns amber below 30% and red below 10%. Click for Power settings |
-| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [wttr.in](https://wttr.in). Location (shown above the weather) and units auto-detected by IP. Hover for feels-like |
+| 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [Open-Meteo](https://open-meteo.com). Location from Windows Location Service (or a city you set). Hover for feels-like |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
 | 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent button (click the header dot) + presets in the right-click menu |
@@ -85,8 +85,8 @@ Accent1=0,200,255,255      ; gradient start (cyan)
 Accent2=150,90,255,255     ; gradient end (violet)
 TempWarn=60                ; °C → amber
 TempHot=80                 ; °C → red
-WeatherLoc=                ; empty = auto-detect from your IP, or a city, airport code or lat,lon
-WeatherUnits=              ; empty = automatic for the region, or m / u (imperial) / M (wind m/s)
+WeatherLoc=                ; empty = Windows Location Service, or a place name (Athens)
+WeatherUnits=m             ; m = metric, u = imperial (°F, mph), ms = metric with wind in m/s
 ```
 
 Light and dark colors live in `@Resources/Theme1.inc` and `Theme0.inc`. Coreglow2 adds its own overrides in `@Resources/Coreglow2/`.
@@ -115,7 +115,7 @@ The choice is saved to that skin's `@Resources\Variables.inc` and survives refre
 
 - [Rainmeter](https://www.rainmeter.net) and its documentation
 - [Core Temp](https://www.alcpu.com/CoreTemp/) by Arthur Liberman
-- Weather by [wttr.in](https://github.com/chubin/wttr.in)
+- Weather by [Open-Meteo](https://open-meteo.com)
 - External IP by [ipify](https://www.ipify.org)
 
 ## License

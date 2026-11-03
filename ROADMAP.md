@@ -6,14 +6,14 @@
 - [x] Modern design: Shape meters, rings, gradient bars, Segoe UI Variable, variables in `Variables.inc`
 - [x] Pro variant: GPU + VRAM, per-thread bars, CPU name, clock/date, top process, C: drive + R/W, LAN IP,
       adapter, ping, total traffic, click actions, hover glow, collapse, auto light/dark theme
-- [x] Weather line (wttr.in, LGIR) in both variants
+- [x] Weather line in both variants (now Open-Meteo)
 - [x] Per-thread bars adapt to any CPU (Cores.lua)
 - [x] Fixes: CoreTemp `Power` type, UsageMonitor string values, top-process %
 - [x] Backup folder + INSTALL.md
 
 ## ✅ Done (v1.1 – polish – 2026-10-07)
 
-- [x] Weather icon from wttr.in `%c`, plus feels-like temperature in the tooltip
+- [x] Weather icon from the weather code, plus feels-like temperature in the tooltip
 - [x] Remember the collapsed state across refreshes (`Collapsed` in ThemeState.inc)
 - [x] Colored per-thread bars (accent < 50% ≤ amber < 80% ≤ red), with a per-thread % tooltip
 - [x] Ring tooltips for CPU and temp: min/max since load, average over the last hour (`AverageSize=3600`)
@@ -30,7 +30,7 @@
 
 ## ✅ Done (v1.3 – 2026-10-09)
 
-- [x] Weather auto-detects the location from the public IP (empty `WeatherLoc`) and uses regional units (`WeatherUnits`: auto / m / u / M); location shown in the tooltip
+- [x] Weather moved from wttr.in to Open-Meteo; location from the Windows Location Service (empty `WeatherLoc`) or a place name; `WeatherUnits`: m / u / ms
 - [x] Location name on its own line above the weather (layout shifted down 18 px, `FullH` 664 / `MiniH` 304)
 
 ## ✅ Done (v1.4 – 2026-10-21)
@@ -46,12 +46,12 @@
 ## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)
-- [ ] Weather forecast tooltip or popup for the next 3 days (wttr.in `format=j1` + Lua parsing)
+- [ ] Weather forecast tooltip or popup for the next 3 days (Open-Meteo `daily` data + Lua parsing)
 - [ ] Settings panel skin: accent color picker, scale, choice of sections, weather location
 - [ ] Scale variable (100% / 125% / 150%) for high-DPI screens
 - [ ] Media "now playing" row (NowPlaying / WebNowPlaying plugin)
 - [ ] Top-3 process lists (CPU and RAM) via UsageMonitor, replacing the single top-process row
-- [ ] Sunrise/sunset line (wttr.in JSON astronomy data, reuses the forecast parser)
+- [ ] Sunrise/sunset line (Open-Meteo `daily=sunrise,sunset`, reuses the forecast parser)
 
 ## 💡 Ideas / maybe
 
@@ -64,4 +64,4 @@
 - CPU fan RPM requires HWiNFO or LibreHardwareMonitor (Core Temp and Windows don't expose it).
 - GPU temperature requires HWiNFO (Windows exposes no counter for it).
 - SWAP shows commit charge, not pagefile usage.
-- wttr.in can rate-limit. The weather then shows "Weather unavailable" until the next refresh.
+- Open-Meteo can be unreachable. The weather then shows "Weather unavailable" until the next refresh.

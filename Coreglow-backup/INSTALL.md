@@ -40,14 +40,13 @@ Your `Variables.inc` settings are kept when you upgrade.
 | `Coreglow1\Coreglow1.ini` (Coreglow2 shows the same data in a large-type card layout) | Weather, CPU, max temp, power, clock, RAM, SWAP, external IP, network speed and graph, uptime, GPU usage + VRAM, per-thread load bars, CPU name, clock/date, top process, C: drive usage + read/write, LAN IP + adapter, ping (1.1.1.1), total traffic, battery row (devices with a battery), accent presets, click actions, hover glow, collapse button (☰), automatic light/dark theme |
 
 ### Weather
-- Shown under the header as `T: 17°C | Partly Cloudy | H: 65% | W: 5 km/h`, from https://wttr.in.
-- Refreshes every 15 minutes. Click it to open the full forecast in your browser.
-- Location: `WeatherLoc=` in `@Resources\Variables.inc`. Empty (the default) auto-detects your location from
-  your public IP, so the skin follows you when you travel. Or pin a city (`Athens`), an airport code (`LGIR`) or `lat,lon`.
-- Units: `WeatherUnits=` empty (the default) uses the units of the detected region (imperial in the US, metric
-  elsewhere). Force them with `m` (metric), `u` (°F, mph) or `M` (metric, wind in m/s).
-- The location wttr.in resolved (e.g. `📍 Sisi, Crete, GR`) is shown on its own line above the weather.
-- Shows "Weather unavailable" if wttr.in can't be reached.
+- Shown under the header as `🌤️ 17°C  Partly cloudy  H 65%`, from [Open-Meteo](https://open-meteo.com) (no API key).
+- Refreshes every 15 minutes. Click it to open the location on windy.com.
+- Location: `WeatherLoc=` in `@Resources\Variables.inc`. Empty (the default) uses the Windows Location Service
+  (Settings > Privacy & security > Location must be on; Windows shows its location icon briefly when the skin reads it,
+  at load and every 6 hours). Or pin a place name (`Athens`, `New York`), which skips Windows location entirely.
+- Units: `WeatherUnits=` `m` (default: °C, km/h), `u` (°F, mph) or `ms` (°C, wind in m/s).
+- Shows "Weather unavailable" if Open-Meteo can't be reached and "Location not found" if `WeatherLoc` can't be resolved.
 - Starts with a weather icon (🌤️). Hover over the line to see the feels-like temperature.
 
 ### Tooltips
@@ -113,7 +112,7 @@ Coreglow1\                 (Coreglow2\ has the same layout, plus @Resources\Core
 - **Temperature, power or clock shows 0:** Core Temp isn't running, or the plugin is missing.
   The power type is `CoreTempType=Power`. Older guides use `CpuPower`, which this plugin rejects.
 - **External IP shows "offline":** no internet access, or api.ipify.org is blocked. The IP refreshes every 10 minutes.
-- **Weather unavailable:** wttr.in is down or rate-limited. It retries on the next 15-minute refresh.
+- **Weather unavailable:** Open-Meteo is unreachable. It retries on the next 15-minute refresh.
 - **Ping shows -1:** the ping target timed out. Change `PingHost`.
 - **Skin doesn't appear:** press Win + D, or Manage → select the skin → Load. Still missing?
   Manage → Settings → enable **Logging**, then check About → Log.
