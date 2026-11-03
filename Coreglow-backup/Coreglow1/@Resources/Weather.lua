@@ -8,4 +8,9 @@ function Fetch()
     SKIN:Bang('!SetOption', 'MeasureWeather', 'URL', url)
     SKIN:Bang('!EnableMeasure', 'MeasureWeather')
     SKIN:Bang('!CommandMeasure', 'MeasureWeather', 'Update')
+    if SKIN:GetVariable('WeatherLoc', '') == '' then
+        SKIN:Bang('!SetOption', 'MeasureRev', 'URL', 'https://api.bigdatacloud.net/data/reverse-geocode-client?localityLanguage=en&latitude=' .. lat .. '&longitude=' .. lon)
+        SKIN:Bang('!EnableMeasure', 'MeasureRev')
+        SKIN:Bang('!CommandMeasure', 'MeasureRev', 'Update')
+    end
 end
