@@ -50,7 +50,7 @@ Each skin is its own folder with its own `@Resources` (variables, accent preset,
 | 🌤️ **Weather** | Icon, temperature, conditions, humidity and wind from [Open-Meteo](https://open-meteo.com). Location from Windows Location Service (or a city you set). Hover for feels-like |
 | ⏱️ **System** | Clock and date, Windows uptime, top CPU process |
 | 📊 **Tooltips** | Min, max and 1-hour average for CPU and temperature |
-| 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent button (click the header dot) + presets in the right-click menu |
+| 🎨 **Look & feel** | Vector Shape meters, gradients, rounded corners, hover glow, collapsible panel (☰), automatic light/dark theme that follows Windows, accent button (click the header dot) + presets in the right-click menu, themed hover cards (follow the accent and light/dark theme) instead of the plain Windows tooltips |
 | 🖱️ **Click actions** | CPU % → Task Manager sorted by CPU · GPU % → by GPU · RAM → by Memory · C: → Explorer · Network → Settings · Weather → forecast |
 
 ## Requirements

@@ -12,6 +12,8 @@ FontLight=Segoe UI Variable Display Light
 ; ===== Colors (R,G,B,Alpha) =====
 BgColor=18,20,28,205
 BorderColor=255,255,255,28
+; Hover tooltip card background (opaque so the text behind it does not show through)
+TipBg=22,25,36,248
 TextColor=235,238,245,255
 LabelColor=150,158,175,255
 TrackColor=255,255,255,22

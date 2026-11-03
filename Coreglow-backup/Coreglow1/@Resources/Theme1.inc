@@ -7,3 +7,4 @@ TextColor=25,28,38,255
 LabelColor=100,108,125,255
 TrackColor=0,0,0,25
 DividerColor=0,0,0,22
+TipBg=250,251,255,250
