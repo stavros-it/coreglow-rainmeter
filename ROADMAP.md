@@ -52,6 +52,13 @@
 - [x] Click CPU % / top process, GPU % or RAM to open Task Manager sorted by CPU / GPU / Memory (edits Task Manager's `settings.json`, no admin rights)
 - [x] Themed hover cards (`Tip.lua`, `TipBg`, accent border) replace the native tooltips and follow the light/dark theme and accent presets
 - [x] Per-skin releases, `.rmskin` packages and GitHub releases v2.1 / v2.1.1
+
+## ✅ Done (v2.2 – 2026-11-08: Coreglow1 1.10, Coreglow2 1.2)
+
+- [x] External IP from api.country.is (IP + country code, free, no key) instead of ipify, still one request per 600 updates
+- [x] Country flag next to the external IP (flagcdn.com, lowercase code, saved to the skin's `DownloadFile\`, git-ignored); hover shows the country code
+- [x] GitHub release v2.2 with both `.rmskin` packages
+
 ## 📋 Backlog (v1.2 – features, not started)
 
 - [ ] GPU temperature / hotspot / fan via the HWiNFO plugin (optional; hide the section if HWiNFO isn't running)
@@ -77,3 +84,4 @@
 - Open-Meteo can be unreachable. The weather then shows "Weather unavailable" until the next refresh.
 - Task Manager opens sorted by the clicked column only when it is not already running (it reads its sort at start-up; an open window keeps its sort).
 - Windows shows its location icon briefly whenever the skin reads the location (at load and every 6 hours). Set `WeatherLoc` to a place name to avoid it.
+- The flag needs both api.country.is and flagcdn.com. If either is down, the flag stays blank (or keeps the last one) until the next refresh; with a VPN it shows the exit country.
